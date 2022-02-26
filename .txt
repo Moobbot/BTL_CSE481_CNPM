@@ -1,0 +1,16 @@
+MVC:
++ Model: Tương tác với Data source - Lấy nội dung dữ liệu
++ View: Chỉ chứa HTML, CSS
++ Controller: -> Trung chuyển giữa View - Model
+  -> Giao tiếp với client
++ Quy trình chạy:
+  -> Người dùng nhập yêu cầu vào Browser (Trình duyệt) và tìm kiếm
+  -> Browser request Web Server với http protcol
+  -> Từ Web Server đi đến Routes (Định tuyến tuyến đường)
+  -> Routes sẽ Dispatcher (Điều hướng - định tuyến) gọi sang "Controller" tương ứng
+  -> "Controller" sẽ tương tác với "Model" để lấy nội dung tương ứng từ Database
+  -> Để data ở "Controller"
+  -> Sau đó "Controller" gọi sang "View" lấy View tương ứng
+  -> Tại "Controller" dùng data từ "Modal" truyền sang "View" => Nhận được "View" hoàn chỉnh
+  -> Trả về qua Client qua Web Server trả về Browser
+  -> Hiển thị ra Web site
