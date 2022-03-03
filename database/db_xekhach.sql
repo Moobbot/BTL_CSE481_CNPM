@@ -59,7 +59,7 @@ CREATE TABLE `nhaxe` (
 
 CREATE TABLE `taikhoan` (
   `ten_taikhoan` varchar(20) NOT NULL,
-  `matkhau` varchar(600) NOT NULL
+  `matkhau_taikhoan` varchar(600) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
