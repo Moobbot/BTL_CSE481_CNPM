@@ -1,3 +1,7 @@
 Trang web chia làm 2 phần:
 1. Phần khách hàng được phép truy cập -> public (html, css, js)
 2. Phần khách hàng không được phép truy cập -> wibu (Khu vực xử lý)
+___________
+Khi gọi round phải login hoặc xử lý trước khi gọi thì viết code tại bridge.php
+___________
+Có bao nhiêu màn hình có bấy nhiêu file trong controllers

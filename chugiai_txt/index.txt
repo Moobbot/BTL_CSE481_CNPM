@@ -19,3 +19,6 @@ http://localhost/BTL_CSE481_CNPM/vexe/huyve
 http://localhost/BTL_CSE481_CNPM/admin/
 ______________________________________________
 Đằng sau tên miền đưa về trang index.php
+______________________________________________
+Khi chạy index.php
+Là đang hiểu được những gì bridge.php có và hiểu được những gì app.php có
