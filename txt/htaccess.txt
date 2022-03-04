@@ -1,0 +1,7 @@
+Là nơi cấu hình tất cả những gì khách hàng viết trong địa chỉ.
+Thông qua (.htaccess) rồi vào server.
+-->Khách hàng đưa link lên
+--> (.htaccess) lấy phần sau tên miền truyền qua biến url truyền vào index.php
+____________________________
+RewriteRule ^(.+)$ index.php?url=$1
+Nghĩa là những gì nằm sau tên miền truyền về index.php tham số là url
