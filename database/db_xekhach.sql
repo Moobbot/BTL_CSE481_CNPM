@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 05, 2022 lúc 10:31 AM
--- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 8.0.10
+-- Host: 127.0.0.1
+-- Generation Time: Mar 05, 2022 at 04:53 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `db_xekhach`
+-- Database: `db_xekhach`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chuyenxe`
+-- Table structure for table `chuyenxe`
 --
 
 CREATE TABLE `chuyenxe` (
@@ -37,20 +37,20 @@ CREATE TABLE `chuyenxe` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chuyenxechay`
+-- Table structure for table `chuyenxechay`
 --
 
 CREATE TABLE `chuyenxechay` (
   `ma_xe` int(11) NOT NULL,
   `ma_chuyenxe` int(11) NOT NULL,
   `soghetrong` int(11) NOT NULL,
-  `trangthai` enum('0','1','2','3') DEFAULT NULL
+  `trangthai` enum('0','1','2','3') DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhaxe`
+-- Table structure for table `nhaxe`
 --
 
 CREATE TABLE `nhaxe` (
@@ -64,7 +64,7 @@ CREATE TABLE `nhaxe` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `taikhoan`
+-- Table structure for table `taikhoan`
 --
 
 CREATE TABLE `taikhoan` (
@@ -72,10 +72,17 @@ CREATE TABLE `taikhoan` (
   `matkhau` varchar(600) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `taikhoan`
+--
+
+INSERT INTO `taikhoan` (`ten_taikhoan`, `matkhau`) VALUES
+('admin', '21232f297a57a5a743894a0e4a801fc3');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tuyenduong`
+-- Table structure for table `tuyenduong`
 --
 
 CREATE TABLE `tuyenduong` (
@@ -88,7 +95,7 @@ CREATE TABLE `tuyenduong` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `vexe`
+-- Table structure for table `vexe`
 --
 
 CREATE TABLE `vexe` (
@@ -105,7 +112,7 @@ CREATE TABLE `vexe` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `xe`
+-- Table structure for table `xe`
 --
 
 CREATE TABLE `xe` (
@@ -116,80 +123,80 @@ CREATE TABLE `xe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `chuyenxe`
+-- Indexes for table `chuyenxe`
 --
 ALTER TABLE `chuyenxe`
   ADD PRIMARY KEY (`ma_chuyenxe`),
   ADD KEY `foreign key1` (`ma_tuyenduong`);
 
 --
--- Chỉ mục cho bảng `chuyenxechay`
+-- Indexes for table `chuyenxechay`
 --
 ALTER TABLE `chuyenxechay`
   ADD KEY `foreign key2` (`ma_chuyenxe`),
   ADD KEY `foreign key3` (`ma_xe`);
 
 --
--- Chỉ mục cho bảng `nhaxe`
+-- Indexes for table `nhaxe`
 --
 ALTER TABLE `nhaxe`
   ADD PRIMARY KEY (`ma_nhaxe`);
 
 --
--- Chỉ mục cho bảng `taikhoan`
+-- Indexes for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`ten_taikhoan`);
 
 --
--- Chỉ mục cho bảng `tuyenduong`
+-- Indexes for table `tuyenduong`
 --
 ALTER TABLE `tuyenduong`
   ADD PRIMARY KEY (`ma_tuyenduong`);
 
 --
--- Chỉ mục cho bảng `vexe`
+-- Indexes for table `vexe`
 --
 ALTER TABLE `vexe`
   ADD PRIMARY KEY (`ma_ve`),
   ADD KEY `foreign key4` (`ma_chuyenxe`);
 
 --
--- Chỉ mục cho bảng `xe`
+-- Indexes for table `xe`
 --
 ALTER TABLE `xe`
   ADD PRIMARY KEY (`ma_xe`),
   ADD KEY `ma_nhaxe` (`ma_nhaxe`);
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chuyenxe`
+-- Constraints for table `chuyenxe`
 --
 ALTER TABLE `chuyenxe`
   ADD CONSTRAINT `foreign key1` FOREIGN KEY (`ma_tuyenduong`) REFERENCES `tuyenduong` (`ma_tuyenduong`);
 
 --
--- Các ràng buộc cho bảng `chuyenxechay`
+-- Constraints for table `chuyenxechay`
 --
 ALTER TABLE `chuyenxechay`
   ADD CONSTRAINT `foreign key2` FOREIGN KEY (`ma_chuyenxe`) REFERENCES `chuyenxe` (`ma_chuyenxe`),
   ADD CONSTRAINT `foreign key3` FOREIGN KEY (`ma_xe`) REFERENCES `xe` (`ma_xe`);
 
 --
--- Các ràng buộc cho bảng `vexe`
+-- Constraints for table `vexe`
 --
 ALTER TABLE `vexe`
   ADD CONSTRAINT `foreign key4` FOREIGN KEY (`ma_chuyenxe`) REFERENCES `chuyenxe` (`ma_chuyenxe`);
 
 --
--- Các ràng buộc cho bảng `xe`
+-- Constraints for table `xe`
 --
 ALTER TABLE `xe`
   ADD CONSTRAINT `xe_ibfk_1` FOREIGN KEY (`ma_nhaxe`) REFERENCES `nhaxe` (`ma_nhaxe`);
