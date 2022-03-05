@@ -8,10 +8,13 @@ class home extends Controller
     }
     function Show($a, $b)
     {
-        //Xử lý dữ liệu
+        //Model - Xử lý dữ liệu
         $nhaxe = $this->model("nhaxeModel");
         $tong = $nhaxe->Tong($a, $b);
-        $this->view("nhaxeView", [
+
+        // View
+        $this->view("chuyenxeView", [
+            "Page" => "new",
             "Number" => $tong,
             "Mau" => "#ddd"
         ]); //key=>value
