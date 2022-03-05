@@ -43,7 +43,7 @@ CREATE TABLE `chuyenxe` (
 CREATE TABLE `chuyenxechay` (
   `ma_xe` int(11) NOT NULL,
   `ma_chuyenxe` int(11) NOT NULL,
-  `ghetrong_chuyenxe` int(11) NOT NULL,
+  `soghetrong` int(11) NOT NULL,
   `trangthai` enum('0','1','2','3') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
