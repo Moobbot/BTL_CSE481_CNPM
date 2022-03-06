@@ -4,9 +4,9 @@ class home extends Controller
     function SayHi()
     {
         $nhaxe = $this->model("nhaxeModel");
-        $this->view("chuyenxeView", [
-            "Page" => "page_khach",
-            "Nhaxe" => $nhaxe->Nhaxe()
+        $this->view("page_khach", [
+            "Page" => "chuyenxeView"
+            //,"Nhaxe" => $nhaxe->Nhaxe()
         ]);
     }
     function Show($a, $b)
@@ -16,8 +16,8 @@ class home extends Controller
         $tong = $nhaxe->Tong($a, $b);
 
         // View
-        $this->view("chuyenxeView", [
-            "Page" => "page_khach",
+        $this->view("page_khach", [
+            "Page" => "chuyenxeView",
             "Number" => $tong,
             "Mau" => "#ddd",
             "Nhaxe" => $nhaxe->Nhaxe()
