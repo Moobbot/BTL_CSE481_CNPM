@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2022 at 05:19 PM
+-- Generation Time: Mar 06, 2022 at 02:41 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -34,6 +34,27 @@ CREATE TABLE `chuyenxe` (
   `giodi_chuyenxe` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `chuyenxe`
+--
+
+INSERT INTO `chuyenxe` (`ma_chuyenxe`, `ma_tuyenduong`, `giatien_chuyenxe`, `giodi_chuyenxe`) VALUES
+(1, 1, 55, '07:00:00'),
+(2, 2, 60, '08:00:00'),
+(3, 3, 60, '08:00:00'),
+(4, 4, 70, '09:00:00'),
+(5, 5, 60, '09:00:00'),
+(6, 1, 55, '10:00:00'),
+(7, 2, 60, '08:00:00'),
+(8, 3, 60, '09:00:00'),
+(9, 4, 70, '08:00:00'),
+(10, 5, 60, '10:00:00'),
+(11, 1, 55, '08:00:00'),
+(12, 2, 60, '10:00:00'),
+(13, 3, 60, '07:00:00'),
+(14, 4, 70, '10:00:00'),
+(15, 5, 60, '09:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +67,17 @@ CREATE TABLE `chuyenxechay` (
   `soghetrong` int(11) UNSIGNED NOT NULL,
   `trangthai` enum('0','1','2','3') DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `chuyenxechay`
+--
+
+INSERT INTO `chuyenxechay` (`ma_xe`, `ma_chuyenxe`, `soghetrong`, `trangthai`) VALUES
+(1, 1, 5, '0'),
+(2, 2, 7, '0'),
+(3, 3, 9, '0'),
+(4, 4, 10, '0'),
+(5, 5, 3, '0');
 
 -- --------------------------------------------------------
 
@@ -60,6 +92,19 @@ CREATE TABLE `nhaxe` (
   `diachi_nhaxe` text NOT NULL,
   `mota_nhaxe` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `nhaxe`
+--
+
+INSERT INTO `nhaxe` (`ma_nhaxe`, `ten_nhaxe`, `sdt_nhaxe`, `diachi_nhaxe`, `mota_nhaxe`) VALUES
+(1, 'A', '123', 'Khu vực A', 'Xanh'),
+(2, 'B', '1234', 'Khu vực B', 'Xanh B'),
+(3, '\"Nghĩa Huyền\"', '0941000565', '\"Hà Nội\"', '\"màu đỏ\"'),
+(4, '\"Huyền Trang\"', '0944010565', '\"Bắc Ninh\"', '\"màu đen\"'),
+(5, '\"Đức Chương\"', '0951888212', '\"Thái Bình\"', '\"màu trắng sữa\"'),
+(6, '\"Ngô Phú\"', '0991222565', '\"Hà Nam \"', '\"màu hồng\"'),
+(7, '\"Dương Kiên\"', '0951888865', '\"Hải Phòng\"', '\"màu xanh\"');
 
 -- --------------------------------------------------------
 
@@ -92,6 +137,17 @@ CREATE TABLE `tuyenduong` (
   `hinhanh_tuyenduong` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tuyenduong`
+--
+
+INSERT INTO `tuyenduong` (`ma_tuyenduong`, `diemdi_tuyenduong`, `diemden_tuyenduong`, `hinhanh_tuyenduong`) VALUES
+(1, 'Bắc Ninh', 'Hà Nội', '296231569849192448/2022/1/14/can-canh-6-loi-xuong-duong-vanh-dai-3-ha-noi-6-1636679138607497105721-16421616899791332490292.jpeg'),
+(2, 'Hà Nam ', 'Hải Phòng', 'files/f1/2019/04/14/tu-hai-phong-di-ha-nam-bao-nhieu-km-bb-baaacReZEd.jpg?v=1555241347703'),
+(3, 'hà Nội ', 'Thái Bình', 'files/f1/2019/03/30/tu-ha-noi-di-thai-binh-bao-nhieu-km-bb-baaac3YdLM.png?v=1553917584092'),
+(4, 'Hà Nam', 'Thái Bình', 'upload/images/2021-1/article_img/2021-01-26/img-bgt-2021-duog-noi-1611630256-width540height360.jpg'),
+(5, 'Bắc Ninh', 'Hải Phòng', 'files/f1/2019/04/17/tu-hai-phong-di-bac-ninh-bao-nhieu-km-bb-baaac4waKz.jpg?v=1555489526228');
+
 -- --------------------------------------------------------
 
 --
@@ -109,6 +165,17 @@ CREATE TABLE `vexe` (
   `cmt_khach` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `vexe`
+--
+
+INSERT INTO `vexe` (`ma_ve`, `ma_chuyenxe`, `diemdon_khach`, `gia_ve`, `hoten_khach`, `sdt_khach`, `email_khach`, `cmt_khach`) VALUES
+(1, 1, 'Bắc Ninh', 20, 'Nguyễn Hoài An', '0945000156', 'hoaian@gmail.com', 120935000),
+(2, 4, 'Hà Nam', 24, 'Nguyễn Đức Kiên', '0800001490', 'kien@gmail.com', 125900014),
+(3, 3, 'Hà Nội', 40, 'Nguyễn Văn Phú', '0945000199', 'phu@gmail.com', 120000000),
+(4, 2, 'Nguyễn Văn Long', 35, 'Ngô Đức Tâm', '0800001412', 'Tam@gmail.com', 125634823),
+(5, 5, 'Bắc Ninh', 35, 'Phạm Quang Dương', '0945120156', 'duong.gmail.com', 120000011);
+
 -- --------------------------------------------------------
 
 --
@@ -121,6 +188,22 @@ CREATE TABLE `xe` (
   `bienso_xe` varchar(10) NOT NULL,
   `soghe_xe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `xe`
+--
+
+INSERT INTO `xe` (`ma_xe`, `ma_nhaxe`, `bienso_xe`, `soghe_xe`) VALUES
+(1, 1, '29B02199', 50),
+(2, 2, '99C52512', 50),
+(3, 3, '17D12256', 50),
+(4, 4, '90B25258', 50),
+(5, 5, '15B25278', 50),
+(6, 1, '29B56599', 50),
+(7, 2, '99B52523', 50),
+(8, 3, '17B54621', 50),
+(9, 4, '90B25299', 50),
+(10, 5, '16B78722', 50);
 
 --
 -- Indexes for dumped tables
@@ -174,31 +257,31 @@ ALTER TABLE `xe`
 -- AUTO_INCREMENT for table `chuyenxe`
 --
 ALTER TABLE `chuyenxe`
-  MODIFY `ma_chuyenxe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_chuyenxe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `nhaxe`
 --
 ALTER TABLE `nhaxe`
-  MODIFY `ma_nhaxe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_nhaxe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tuyenduong`
 --
 ALTER TABLE `tuyenduong`
-  MODIFY `ma_tuyenduong` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_tuyenduong` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `vexe`
 --
 ALTER TABLE `vexe`
-  MODIFY `ma_ve` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_ve` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `xe`
 --
 ALTER TABLE `xe`
-  MODIFY `ma_xe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_xe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
