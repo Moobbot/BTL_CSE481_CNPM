@@ -23,11 +23,9 @@
     include_once('wibu/views/blocks/load_and_up.php');
     include_once('wibu/views/blocks/header.php');
     ?>
-    <div class="container" style="height: 95vh;">
+    <div class="container" style="min-height: 95vh;">
         <?php
-        while ($row = mysqli_fetch_array($data["Nhaxe"])) {
-            echo $row["ten_nhaxe"] . "<br/>";
-        }
+        include_once("wibu/views/pages/" . $data["Page"] . ".php");
         ?>
     </div>
     <!-- Footer Start-->
