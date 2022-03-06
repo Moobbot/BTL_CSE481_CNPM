@@ -1,5 +1,6 @@
 MVC:
 + Model: Tương tác với Data source - Lấy nội dung dữ liệu
+  Xử lý dữ liệu trả về "Controller"
 + View: Chỉ chứa HTML, CSS
 + Controller: -> Trung chuyển giữa View - Model
   -> Giao tiếp với client

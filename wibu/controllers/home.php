@@ -14,15 +14,10 @@ class home extends Controller
 
         // View
         $this->view("chuyenxeView", [
-            "Page" => "new",
+            "Page" => "page_khach",
             "Number" => $tong,
-            "Mau" => "#ddd"
+            "Mau" => "#ddd",
+            "Nhaxe" => $nhaxe->Nhaxe()
         ]); //key=>value
-    }
-    function nhaxe()
-    {
-        // Gọi modal ->  dữ liệu nhà lưu array
-        // Gọi view -> card
-        // for len(array)
     }
 }
