@@ -6,4 +6,9 @@ class lienhe extends Controller
         $lienhe = $this->view("lienhe");
 
     }
+    function ResultForm(){
+        if(isset($_POST["submit"])){
+            
+        }
+    }
 }

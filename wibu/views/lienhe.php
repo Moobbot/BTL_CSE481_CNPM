@@ -67,7 +67,7 @@
                 <div class="row">
                     <div class="col-md-8 mt-2">
                         <!-- form -->
-                        <form>
+                        <form action = "lienhe/ResultForm" method = "POST">
                             <div class="row">
                                 <label class="form-lable col-lg-3 text-lg-end">
                                     Nội dung góp ý <span class="text-danger">*</span>
@@ -87,7 +87,7 @@
                                     Họ và tên <span class="text-danger">*</span>
                                 </label>
                                 <div class="col-lg-8 mb-3">
-                                    <input class="form-control" type="text" onfocus="this.placeholder = ''"
+                                    <input class="form-control" name="name" type="text" onfocus="this.placeholder = ''"
                                         onblur="this.placeholder = 'Nhập họ tên của bạn'"
                                         placeholder="Nhập họ tên của bạn" required>
                                 </div>
@@ -97,7 +97,7 @@
                                     Emain <span class="text-danger">*</span>
                                 </label>
                                 <div class="col-lg-8 mb-3">
-                                    <input class="form-control" type="email" onfocus="this.placeholder = ''"
+                                    <input class="form-control" name="email" type="email" onfocus="this.placeholder = ''"
                                         onblur="this.placeholder = 'Nhập email của bạn'"
                                         placeholder="Nhập email của bạn" required>
                                 </div>
@@ -107,13 +107,13 @@
                                     Chủ đề <span class="text-danger">*</span>
                                 </label>
                                 <div class="col-lg-8 mb-3">
-                                    <input class="form-control" type="text" onfocus="this.placeholder = ''"
+                                    <input class="form-control" type="text" name="topic" onfocus="this.placeholder = ''"
                                         onblur="this.placeholder = 'Nhập chủ đề'" placeholder="Nhập chủ đề" required>
                                 </div>
                             </div>
 
 
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="submit" class="btn btn-primary" name = "submit">Send</button>
                         </form>
                     </div>
                     <div class="col-md-3 offset-lg-1">
