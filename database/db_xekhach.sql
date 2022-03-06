@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2022 at 03:37 AM
+-- Generation Time: Mar 05, 2022 at 05:19 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -28,13 +28,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `chuyenxe` (
-  `ma_chuyenxe` int(11) NOT NULL,
-  `ma_xe` int(11) NOT NULL,
-  `ma_tuyenxe` int(11) NOT NULL,
-  `ghetrong_chuyenxe` int(11) NOT NULL,
+  `ma_chuyenxe` int(11) UNSIGNED NOT NULL,
+  `ma_tuyenduong` int(11) UNSIGNED NOT NULL,
   `giatien_chuyenxe` int(11) NOT NULL,
-  `giodi_chuyenxe` time NOT NULL,
-  `gioden_chuyenxe` time NOT NULL
+  `giodi_chuyenxe` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chuyenxechay`
+--
+
+CREATE TABLE `chuyenxechay` (
+  `ma_xe` int(11) UNSIGNED NOT NULL,
+  `ma_chuyenxe` int(11) UNSIGNED NOT NULL,
+  `soghetrong` int(11) UNSIGNED NOT NULL,
+  `trangthai` enum('0','1','2','3') DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -44,7 +54,7 @@ CREATE TABLE `chuyenxe` (
 --
 
 CREATE TABLE `nhaxe` (
-  `ma_nhaxe` int(11) NOT NULL,
+  `ma_nhaxe` int(11) UNSIGNED NOT NULL,
   `ten_nhaxe` varchar(30) NOT NULL,
   `sdt_nhaxe` varchar(11) NOT NULL,
   `diachi_nhaxe` text NOT NULL,
@@ -59,7 +69,7 @@ CREATE TABLE `nhaxe` (
 
 CREATE TABLE `taikhoan` (
   `ten_taikhoan` varchar(20) NOT NULL,
-  `matkhau_taikhoan` varchar(600) NOT NULL
+  `matkhau` varchar(600) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -76,10 +86,10 @@ INSERT INTO `taikhoan` (`ten_taikhoan`, `matkhau`) VALUES
 --
 
 CREATE TABLE `tuyenduong` (
-  `ma_tuyenduong` int(11) NOT NULL,
+  `ma_tuyenduong` int(11) UNSIGNED NOT NULL,
   `diemdi_tuyenduong` text NOT NULL,
   `diemden_tuyenduong` text NOT NULL,
-  `km_tuyenduong` int(11) NOT NULL
+  `hinhanh_tuyenduong` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -89,9 +99,9 @@ CREATE TABLE `tuyenduong` (
 --
 
 CREATE TABLE `vexe` (
-  `ma_ve` int(11) NOT NULL,
-  `ma_chuyenxe` int(11) NOT NULL,
-  `diendon_khach` varchar(50) NOT NULL,
+  `ma_ve` int(11) UNSIGNED NOT NULL,
+  `ma_chuyenxe` int(11) UNSIGNED NOT NULL,
+  `diemdon_khach` varchar(50) NOT NULL,
   `gia_ve` int(11) NOT NULL,
   `hoten_khach` varchar(50) NOT NULL,
   `sdt_khach` varchar(11) NOT NULL,
@@ -106,8 +116,8 @@ CREATE TABLE `vexe` (
 --
 
 CREATE TABLE `xe` (
-  `ma_xe` int(11) NOT NULL,
-  `ma_nhaxe` int(11) NOT NULL,
+  `ma_xe` int(11) UNSIGNED NOT NULL,
+  `ma_nhaxe` int(11) UNSIGNED NOT NULL,
   `bienso_xe` varchar(10) NOT NULL,
   `soghe_xe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -120,7 +130,15 @@ CREATE TABLE `xe` (
 -- Indexes for table `chuyenxe`
 --
 ALTER TABLE `chuyenxe`
-  ADD PRIMARY KEY (`ma_chuyenxe`);
+  ADD PRIMARY KEY (`ma_chuyenxe`),
+  ADD KEY `ma_tuyenduong` (`ma_tuyenduong`);
+
+--
+-- Indexes for table `chuyenxechay`
+--
+ALTER TABLE `chuyenxechay`
+  ADD KEY `ma_chuyenxe` (`ma_chuyenxe`),
+  ADD KEY `ma_xe` (`ma_xe`);
 
 --
 -- Indexes for table `nhaxe`
@@ -138,13 +156,15 @@ ALTER TABLE `tuyenduong`
 -- Indexes for table `vexe`
 --
 ALTER TABLE `vexe`
-  ADD PRIMARY KEY (`ma_ve`);
+  ADD PRIMARY KEY (`ma_ve`),
+  ADD KEY `ma_chuyenxe` (`ma_chuyenxe`);
 
 --
 -- Indexes for table `xe`
 --
 ALTER TABLE `xe`
-  ADD PRIMARY KEY (`ma_xe`);
+  ADD PRIMARY KEY (`ma_xe`),
+  ADD KEY `ma_nhaxe` (`ma_nhaxe`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -154,31 +174,60 @@ ALTER TABLE `xe`
 -- AUTO_INCREMENT for table `chuyenxe`
 --
 ALTER TABLE `chuyenxe`
-  MODIFY `ma_chuyenxe` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_chuyenxe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `nhaxe`
 --
 ALTER TABLE `nhaxe`
-  MODIFY `ma_nhaxe` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_nhaxe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tuyenduong`
 --
 ALTER TABLE `tuyenduong`
-  MODIFY `ma_tuyenduong` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_tuyenduong` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `vexe`
 --
 ALTER TABLE `vexe`
-  MODIFY `ma_ve` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_ve` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `xe`
 --
 ALTER TABLE `xe`
-  MODIFY `ma_xe` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_xe` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `chuyenxe`
+--
+ALTER TABLE `chuyenxe`
+  ADD CONSTRAINT `chuyenxe_ibfk_1` FOREIGN KEY (`ma_tuyenduong`) REFERENCES `tuyenduong` (`ma_tuyenduong`);
+
+--
+-- Constraints for table `chuyenxechay`
+--
+ALTER TABLE `chuyenxechay`
+  ADD CONSTRAINT `chuyenxechay_ibfk_1` FOREIGN KEY (`ma_chuyenxe`) REFERENCES `chuyenxe` (`ma_chuyenxe`),
+  ADD CONSTRAINT `chuyenxechay_ibfk_2` FOREIGN KEY (`ma_xe`) REFERENCES `xe` (`ma_xe`);
+
+--
+-- Constraints for table `vexe`
+--
+ALTER TABLE `vexe`
+  ADD CONSTRAINT `vexe_ibfk_1` FOREIGN KEY (`ma_chuyenxe`) REFERENCES `chuyenxe` (`ma_chuyenxe`);
+
+--
+-- Constraints for table `xe`
+--
+ALTER TABLE `xe`
+  ADD CONSTRAINT `xe_ibfk_1` FOREIGN KEY (`ma_nhaxe`) REFERENCES `nhaxe` (`ma_nhaxe`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
