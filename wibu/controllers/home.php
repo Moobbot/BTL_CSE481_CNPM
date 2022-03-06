@@ -4,7 +4,10 @@ class home extends Controller
     function SayHi()
     {
         $nhaxe = $this->model("nhaxeModel");
-        echo $nhaxe->GetNhaxe();
+        $this->view("chuyenxeView", [
+            "Page" => "page_khach",
+            "Nhaxe" => $nhaxe->Nhaxe()
+        ]);
     }
     function Show($a, $b)
     {

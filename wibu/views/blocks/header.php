@@ -1,21 +1,42 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Wibu Xe khách | Teamplate</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-    <!-- CSS here -->
-    <!-- bootstrap5 -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="./assets/css/themify-icons.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-
-<body>
+<header>
+    <!-- Header Start -->
+    <div class="header-area" id="header">
+        <div class="main-header header-sticky">
+            <nav class="navbar navbar-expand-md navbar-light bg-white">
+                <div class="header-left">
+                    <!-- Logo -->
+                    <a href="#" class="navbar-brand logo">
+                        <img class="d-inline-block align-center" src="#" alt="logo Wibu">
+                        <span class="hidden">Wibu</span>
+                    </a>
+                </div>
+                <button type="button" class="btn-menu-mobile navbar-toggler" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
+                    <ul class="navbar-nav text-start mx-auto">
+                        <li class="nav-item active">
+                            <a href="#" class="active"> Trang chủ </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"> Về Chúng Tôi </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"> Các cửa hàng </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"> Tin tức </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"> Liên hệ </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-right">
+                    <a href="#" class="header-btn2">Đặt ngay!</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>

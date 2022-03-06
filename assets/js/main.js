@@ -17,7 +17,7 @@
             $('#back-top').fadeOut(600);
         } else {
             $(".header-sticky").addClass("sticky-bar");
-            $('#back-top').fadeIn(600);
+            $('#back-top').fadeIn(800);
         }
     });
 
