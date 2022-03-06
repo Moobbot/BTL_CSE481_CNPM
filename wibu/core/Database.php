@@ -1,5 +1,5 @@
 <?php
-class DB
+class Database
 {
     public $con;
     protected $servername = "localhost";

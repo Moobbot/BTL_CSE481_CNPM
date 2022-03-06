@@ -1,6 +1,6 @@
 <?php
 //Kết nối DB
-class NhaxeModel extends DB
+class NhaxeModel extends Database
 {
     public function GetNhaxe()
     {

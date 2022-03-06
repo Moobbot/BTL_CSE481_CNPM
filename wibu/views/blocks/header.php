@@ -28,7 +28,7 @@
                             <a href="#"> Tin tức </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"> Liên hệ </a>
+                            <a href="./lienhe"> Liên hệ </a>
                         </li>
                     </ul>
                 </div>
