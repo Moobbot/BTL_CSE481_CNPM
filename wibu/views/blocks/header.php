@@ -32,9 +32,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="header-right">
+                <!-- <div class="header-right">
                     <a href="#" class="header-btn2">Đặt ngay!</a>
-                </div>
+                </div> -->
             </nav>
         </div>
     </div>
