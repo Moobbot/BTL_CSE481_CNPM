@@ -20,16 +20,16 @@
 
 <body>
     <?php
-    include_once('wibu/views/blocks/load_and_up.php');
-    include_once('wibu/views/blocks/header.php');
+    require_once('wibu/views/blocks/load_and_up.php');
+    require_once('wibu/views/blocks/header.php');
     ?>
-    <div class="container" style="min-height: 95vh;">
+    <div class="container-fluid p-0" style="min-height: 95vh;">
         <?php
-        include_once("wibu/views/pages/" . $data["Page"] . ".php");
+        require_once("wibu/views/pages/" . $data["Page"] . ".php");
         ?>
     </div>
     <!-- Footer Start-->
-    <?php include_once('wibu/views/blocks/footer.php'); ?>
+    <?php require_once('wibu/views/blocks/footer.php'); ?>
 
     <!-- Footer End-->
     <!-- JS here -->
