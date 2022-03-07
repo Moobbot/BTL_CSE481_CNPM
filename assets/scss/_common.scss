@@ -201,9 +201,9 @@ hr {
             // -ms-transform: translateY(-50%);
             @include transition_06();
             // -o-transition: .6s;
-            // img {
-            //     max-width: 55px;
-            // }
+            img {
+                max-width: 80px;
+            }
         }
         // .pere-text {
         //     strong {

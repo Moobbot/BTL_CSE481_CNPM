@@ -6,7 +6,7 @@
                 <div class="header-left">
                     <!-- Logo -->
                     <a href="#" class="navbar-brand logo">
-                        <img class="d-inline-block align-center" src="#" alt="logo Wibu">
+                        <img class="d-inline-block align-center img-fluid" src="./assets/img/logo/logo.png" alt="logo Wibu">
                         <span class="hidden">Wibu</span>
                     </a>
                 </div>
