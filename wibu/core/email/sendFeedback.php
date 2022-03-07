@@ -7,8 +7,6 @@ require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 // Đóng gói đoạn xử lý gửi Email vào Function
-function sendEmail($recipient, $code)
-{
     // 1. Cài đặt môi trường sử dụng phpmailer
     // 2. Tạo ra đối tượng PHPMailer
     $mail = new PHPMailer(true); //Biến $mail đang là 1 object
@@ -38,21 +36,23 @@ function sendEmail($recipient, $code)
 
         // Tiêu đề Email là gì?
         $mail->isHTML(true);   // Set email format to HTML
-        $mail->Subject = '[Feedback]'+ $data["topic"];
+        $mail->Subject = '[Feedback]'.$data["topic"];
         // Nội dung Email
         $mail->Body = $data["message"];
         // Tệp tên đính kèm Email gửi đi
         // $mail->addAttachment('pdf/Giay_bao_mat_sau.pdf'); // Nếu bạn muốn đính kèm tệp tin gửi đi
         // Gửi thư
         if ($mail->send()) {
-
             ?>
-            <script>alert("Thư gửi thành công")</script>
-            <?php
+<script>
+alert("Thư gửi thành công")
+</script>
+<?php
         }
     } catch (Exception $e) {
         ?>
-            <script>alert("Có vấn đề xảy ra, vui lòng kiểm tra lại!")</script>
-        <?php
+<script>
+alert("Có vấn đề xảy ra, vui lòng kiểm tra lại!")
+</script>
+<?php
     }
-}
