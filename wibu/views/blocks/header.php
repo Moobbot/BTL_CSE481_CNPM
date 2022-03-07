@@ -19,13 +19,13 @@
                             <a href="./" class="active"> Trang chủ </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"> Về Chúng Tôi </a>
+                            <a href="#"> Vé xe liên tỉnh </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"> Các cửa hàng </a>
+                            <a href="./nhaxe_danhsach"> Nhà xe </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"> Tin tức </a>
+                            <a href="#"> Lịch trình </a>
                         </li>
                         <li class="nav-item">
                             <a href="./lienhe"> Liên hệ </a>
