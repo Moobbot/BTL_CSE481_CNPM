@@ -685,7 +685,7 @@ hr {
 /* The hero image - là một hình ảnh lớn có văn bản, thường được đặt ở đầu trang web*/
 /*Tham khảo tại https://www.w3schools.com/howto/howto_css_hero_image.asp*/
 .hero-image-1 {
-  background-image: url(../img/hero/h1_hero.png);
+  background-image: url(../img/gallery/home-1.jpg);
   /* Định vị và căn giữa hình ảnh để chia tỷ lệ đẹp trên tất cả các màn hình */
   background-position: top center;
   background-repeat: no-repeat;
@@ -757,6 +757,108 @@ hr {
 @media (max-width: 575px) {
   .slider-area-2 .slider-cap h2 {
     font-size: 27px;
+  }
+}
+
+/*------------------------------------CSS Offer-services----------------------------------*/
+.offer-services .single-offers {
+  position: relative;
+}
+
+.offer-services .single-offers .offers-caption {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.offer-services .single-offers .offers-caption .cat-icon img {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 575px) {
+  .offer-services .single-offers .offers-caption .cat-icon img {
+    margin-bottom: 9px;
+  }
+}
+
+.offer-services .single-offers .offers-caption .cat-cap {
+  padding: 0 102px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .offer-services .single-offers .offers-caption .cat-cap {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .offer-services .single-offers .offers-caption .cat-cap {
+    padding: 0 10px;
+  }
+}
+
+.offer-services .single-offers .offers-caption .cat-cap h5 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 21px;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .offer-services .single-offers .offers-caption .cat-cap h5 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 575px) {
+  .offer-services .single-offers .offers-caption .cat-cap h5 {
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+}
+
+.offer-services .single-offers .offers-caption .cat-cap p {
+  margin-bottom: 36px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .offer-services .single-offers .offers-caption .cat-cap p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .offer-services .single-offers .offers-caption .cat-cap p {
+    margin-bottom: 0px;
+  }
+}
+
+/*------------------------------------CSS Map----------------------------------*/
+.map-area {
+  margin-top: 130px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .map-area {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .map-area {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 575px) {
+  .map-area {
+    margin-top: 90px;
   }
 }
 

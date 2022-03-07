@@ -18,7 +18,7 @@
     <section class="contact-section">
         <div class="container">
             <a href="https://bitly.com.vn/v86yof" target="_blank">
-                <img class="img-fluid mb-5" src="./assets/img/gallery/truso.png" alt="Trụ sở Zala: 0CT3C khu đô thị Handiresco Cổ Nhuế, thành phố Hà Nội">
+                <img class="img-fluid mb-5" src="./assets/img/gallery/truso.png" alt="Trụ sở Xe khách Wibu">
             </a>
             <div class="row">
                 <div class="col-lg-12">
