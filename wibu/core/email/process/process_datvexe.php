@@ -1,6 +1,6 @@
 
 <?php
-include('./send.php');
+include_once('./send.php');
 if (isset($_POST['username'])) {
     $username = $_POST['username'];
     $phone = $_POST['phone'];
@@ -17,7 +17,7 @@ if (isset($_POST['username'])) {
 
 
 
-    $sql = "INSERT INTO `vexe`(  `ma_chuyenxe`,`diemdon_khach`, `hoten_khach`, `sdt_khach`, `email_khach`, `cmt_khach`) 
+    $sql = "INSERT INTO `vexe`(`ma_chuyenxe`,`diemdon_khach`, `hoten_khach`, `sdt_khach`, `email_khach`, `cmt_khach`) 
     VALUES (1,'$address','$username','$phone','$email','$cccd')";
 
     $result = mysqli_query($conn, $sql);

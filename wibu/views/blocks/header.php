@@ -2,7 +2,7 @@
     <!-- Header Start -->
     <div class="header-area" id="header">
         <div class="main-header header-sticky">
-            <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <nav class="navbar navbar-expand-md navbar-light" style="background-color: #f3f5ff;">
                 <div class="header-left">
                     <!-- Logo -->
                     <a href="#" class="navbar-brand logo">

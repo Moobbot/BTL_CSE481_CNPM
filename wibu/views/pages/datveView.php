@@ -10,7 +10,6 @@
                     <div class="col-md-6">
                         <label for="" class="fs-3" id="Name_xekhach" style="font-weight: 600;">Xe khách Hoàng Hà</label>
                         <br>
-
                         <label for="" class="fs-5" id="Name_xekhach" style="font-weight: 600;">Xe khách 30 chỗ </label>
                         <br>
                         <label for="" class="fs-5" id="Name_xekhach" style="font-weight: 600;">Giờ khởi hành : 15h30</label>
@@ -21,7 +20,6 @@
                             <label for="" class="fs-5 px-3 pb-1 rounded border border-warning bg-warning m-3" id="Name_xekhach" style="font-weight: 600;">Chất lượng</label>
                             <label for="" class="fs-5 px-3 pb-1 rounded border border-warning bg-warning m-3" id="Name_xekhach" style="font-weight: 600;">Trách nhiệm</label>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -76,7 +74,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="d-flex justify-content-center pt-5">
                 <div class="col-2 text-center">
                     <button type="button" class="btn btn-danger px-4">Huỷ</button>
@@ -85,7 +82,6 @@
                     <button type="button" class="btn btn-primary" id="submit">Thanh toán</button>
                 </div>
             </div>
-
         </fieldset>
     </form>
 </div>
@@ -113,8 +109,6 @@
 
                     },
                     success: function(response) {
-
-
                         alert(response)
                     }
                 });

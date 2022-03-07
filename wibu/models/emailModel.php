@@ -2,7 +2,6 @@
 //Kết nối DB
 class emailModel extends Database
 {
-
     public function UpVe()
     {
         //connect DB
