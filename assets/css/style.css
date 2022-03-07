@@ -331,6 +331,10 @@ hr {
   transition: all 0.6s ease 0s;
 }
 
+.preloader .preloader-inner .preloader-img img {
+  max-width: 80px;
+}
+
 @-webkit-keyframes zoom {
   0% {
     -webkit-transform: rotate(0deg);
@@ -478,6 +482,10 @@ hr {
   .header-area .main-header nav .header-left .logo {
     padding-left: 15px;
   }
+}
+
+.header-area .main-header nav .header-left .logo img {
+  width: 120px;
 }
 
 .header-area .main-header nav .main-menu ul li a {
