@@ -8,7 +8,7 @@ class nhaxe_danhsach extends Controller
             "page_khach",
             [
                 "Page" => "nhaxeView",
-                "Nhaxe" => $nhaxe->Nhaxe()
+                "Nhaxe" => $nhaxe->GetNhaxe()
             ]
         );
     }

@@ -12,7 +12,7 @@ class HomeModel extends Database
     public function GetNhaxe()
     {
         //connect DB
-        $nx = "SELECT * FROM nhaxe";
+        $nx = "SELECT * FROM nhaxe WHERE ma_nhaxe > 3 AND ma_nhaxe < 8";
         return mysqli_query($this->con, $nx);
     }
 }

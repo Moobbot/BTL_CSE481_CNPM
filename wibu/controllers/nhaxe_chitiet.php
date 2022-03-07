@@ -8,7 +8,7 @@ class nhaxe_chitiet extends Controller
             "page_khach",
             [
                 "Page" => "nhaxe_chitietView",
-                "Nhaxe" => $nhaxe->Nhaxe()
+                "Nhaxe" => $nhaxe->Getnhaxe()
             ]
         );
     }

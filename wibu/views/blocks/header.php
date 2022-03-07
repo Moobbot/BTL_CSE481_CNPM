@@ -22,7 +22,7 @@
                             <a href="#"> Về Chúng Tôi </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"> Các cửa hàng </a>
+                            <a href="./nhaxe_danhsach"> Nhà xe </a>
                         </li>
                         <li class="nav-item">
                             <a href="#"> Tin tức </a>
