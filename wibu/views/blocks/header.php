@@ -16,7 +16,7 @@
                 <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav text-start mx-auto">
                         <li class="nav-item active">
-                            <a href="#" class="active"> Trang chủ </a>
+                            <a href="./" class="active"> Trang chủ </a>
                         </li>
                         <li class="nav-item">
                             <a href="#"> Về Chúng Tôi </a>
