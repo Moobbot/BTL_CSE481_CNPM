@@ -16,7 +16,7 @@ class nhaxe_chitiet extends Controller
     {
         $nhaxe = $this->model("nxchitietModel");
         $this->view(
-            "page_khach",
+            "khongview",
             [
                 "Page" => "nhaxe_chitietView",
                 "Nhaxe" => $nhaxe->Getnhaxe($id)

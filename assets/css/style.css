@@ -276,13 +276,6 @@ hr {
   background-position: left;
 }
 
-.card:hover {
-  -webkit-box-shadow: 1px 8px 20px grey;
-          box-shadow: 1px 8px 20px grey;
-  -webkit-transform: box-shadow 0.6s ease-in;
-  transform: box-shadow 0.6s ease-in;
-}
-
 .hidden {
   display: none;
 }
