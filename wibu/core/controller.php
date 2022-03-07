@@ -14,4 +14,9 @@ class Controller
     {
         require_once "./wibu/views/" . $view . ".php";
     }
+
+    //hàm gọi gửi email
+    public function send($data = []){
+        
+    }
 }

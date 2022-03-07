@@ -1,6 +1,7 @@
 <div class="main-area ">
     <!--* slider Start -->
-    <div class="slider-area-2" style = "margin-left: -117px; margin-right: -117px;" data-background="./public/lo-trinh-bus-30-tphcm-1.jpg">
+    <div class="slider-area-2" style="margin-left: -117px; margin-right: -117px;"
+        data-background="./public/lo-trinh-bus-30-tphcm-1.jpg">
         <div class="slider-height-2 d-flex align-items-center">
             <div class="container">
                 <div class="row">
@@ -26,8 +27,8 @@
                 <div class="col-lg-12">
                     <h2 class="contact-title"> Góp ý </h2>
                     <div class="row">
-                        <form role="form" class="form-contact col-lg-8 mb-3" action="contact_process.php" method="post"
-                            id="contactForm" novalidate="novalidate">
+                        <form class="form-contact col-lg-8 mb-3" action="lienhe/sendemail" method="POST"
+                            >
                             <div class="row">
                                 <div class="col-lg-12 mb-5">
                                     <h3 class="form-title mb-4">
@@ -58,7 +59,7 @@
                                         <div class="col-lg-8 mb-3">
                                             <input class="form-control" type="text" onfocus="this.placeholder = ''"
                                                 onblur="this.placeholder = 'Nhập họ tên của bạn'"
-                                                placeholder="Nhập họ tên của bạn">
+                                                placeholder="Nhập họ tên của bạn" name="name" required>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -67,7 +68,8 @@
                                         </label>
                                         <div class="col-lg-8 mb-3">
                                             <input class="form-control" type="email" onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Nhập email của bạn'" placeholder="Email">
+                                                onblur="this.placeholder = 'Nhập email của bạn'" placeholder="Email"
+                                                name="email" required>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -76,12 +78,13 @@
                                         </label>
                                         <div class="col-lg-8 mb-3">
                                             <input class="form-control" type="text" onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Nhập chủ đề'" placeholder="Nhập chủ đề">
+                                                onblur="this.placeholder = 'Nhập chủ đề'" placeholder="Nhập chủ đề"
+                                                name="topic" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn button boxed-btn">Send</button>
+                            <button type="submit" class="btn button boxed-btn" name = "sendemail">Send</button>
                         </form>
                         <div class="col-lg-3 offset-lg-1">
                             <div class="contact-info d-flex p-3">

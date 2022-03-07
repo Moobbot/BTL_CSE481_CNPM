@@ -10,4 +10,12 @@ class lienhe extends Controller
             ]
         );
     }
+    function sendemail(){
+        if(isset($_POST["sendemail"])){
+            $message = $_POST["message"];
+            $name = $_POST["name"];
+            $topic = $_POST["topic"];
+            $email = $_POST["email"];
+        }
+    }    
 }
