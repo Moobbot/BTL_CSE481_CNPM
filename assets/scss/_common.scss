@@ -151,6 +151,11 @@ hr {
     background-position: left;
 }
 
+.card:hover {
+    box-shadow: 1px 8px 20px grey;
+    @include transform(box-shadow .6s ease-in);
+}
+
 .hidden {
     display: none;
 }
