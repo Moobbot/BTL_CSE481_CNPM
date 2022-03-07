@@ -98,13 +98,11 @@ CREATE TABLE `nhaxe` (
 --
 
 INSERT INTO `nhaxe` (`ma_nhaxe`, `ten_nhaxe`, `sdt_nhaxe`, `diachi_nhaxe`, `mota_nhaxe`) VALUES
-(1, 'A', '123', 'Khu vực A', 'Xanh'),
-(2, 'B', '1234', 'Khu vực B', 'Xanh B'),
-(3, '\"Nghĩa Huyền\"', '0941000565', '\"Hà Nội\"', '\"màu đỏ\"'),
-(4, '\"Huyền Trang\"', '0944010565', '\"Bắc Ninh\"', '\"màu đen\"'),
-(5, '\"Đức Chương\"', '0951888212', '\"Thái Bình\"', '\"màu trắng sữa\"'),
-(6, '\"Ngô Phú\"', '0991222565', '\"Hà Nam \"', '\"màu hồng\"'),
-(7, '\"Dương Kiên\"', '0951888865', '\"Hải Phòng\"', '\"màu xanh\"');
+(1, '\"Nghĩa Huyền\"', '0941000565', '\"Hà Nội\"', '\"màu đỏ\"'),
+(2, '\"Huyền Trang\"', '0944010565', '\"Bắc Ninh\"', '\"màu đen\"'),
+(3, '\"Đức Chương\"', '0951888212', '\"Thái Bình\"', '\"màu trắng sữa\"'),
+(4, '\"Ngô Phú\"', '0991222565', '\"Hà Nam \"', '\"màu hồng\"'),
+(5, '\"Dương Kiên\"', '0951888865', '\"Hải Phòng\"', '\"màu xanh\"');
 
 -- --------------------------------------------------------
 
