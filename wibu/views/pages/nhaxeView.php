@@ -6,12 +6,12 @@
                 <h2>Danh sách nhà xe</h2>
             </div>
         </div>
-        <div class="row justify-content-between p-0 m-0">
+        <div class="row justify-content-lg-start p-0 m-0">
             <?php
             while ($row = mysqli_fetch_array($data["Nhaxe"])) {
             ?>
                 <div class="card my-2 mx-3 px-0" style="width: 23em;">
-                    <a href="./nhaxe_chitiet">
+                    <a href="./nhaxe_chitiet/Show/<?= $row["ma_nhaxe"] ?>">
                         <img src="https://vcdn1-vnexpress.vnecdn.net/2021/04/08/DSC6562-JPG.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=8QlmAuC5guARwkn2aD_aBA" class="card-img-top" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">XE KHÁCH <?= $row["ten_nhaxe"] ?></h5>

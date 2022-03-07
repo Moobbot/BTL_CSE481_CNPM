@@ -9,7 +9,8 @@ class home extends Controller
             [
                 "Page" => "homeView",
                 "Chuyenxe" => $home->GetChuyenxe(),
-                "Nhaxe" => $home->GetNhaxe()
+                "Nhaxe" => $home->GetNhaxe(),
+                "Tuyenduong" => $home->GetTuyenduong()
             ]
         );
     }

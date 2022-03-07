@@ -1,7 +1,14 @@
+<?php
+$row = mysqli_fetch_array($data["Nhaxe"]);
+if ($row > 0) {
+    $name = $row['ten_nhaxe'];
+    $describe = $row['mota_nhaxe'];
+}
+?>
 <section class="offer-services mt-5" id="service">
     <div class="container">
         <div class="col-12 section-tittle my-4">
-            <h3>Nhà xe</h3>
+            <h3>Nhà xe <?= $name ?></h3>
         </div>
         <div class="row">
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
