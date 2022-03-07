@@ -23,7 +23,8 @@ class App
         }
 
         require_once "./wibu/controllers/" . $this->controller . ".php";
-        $this->controller = new $this->controller;
+
+        $this->controller = new $this->controller; //Coi controller như màn hình
 
         //Action - được chạy
 

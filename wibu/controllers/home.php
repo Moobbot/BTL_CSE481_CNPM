@@ -1,12 +1,16 @@
 <?php
-class home
+class home extends Controller
 {
     function SayHi()
     {
-        echo "Home - SayHi";
-    }
-    function Show()
-    {
-        echo "Home - Show";
+        $home = $this->model("homeModel");
+        $this->view(
+            "page_khach",
+            [
+                "Page" => "homeView",
+                "Chuyenxe" => $home->GetChuyenxe(),
+                "Nhaxe" => $home->GetNhaxe()
+            ]
+        );
     }
 }
