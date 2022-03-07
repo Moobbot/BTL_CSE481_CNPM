@@ -14,11 +14,4 @@ class Controller
     {
         require_once "./wibu/views/" . $view . ".php";
     }
-
-    //hàm gọi gửi email
-    public function sendController($data){
-        if($data["form"]){
-            require_once "./wibu/core/email/sendFeedback.php";
-        }
-    }
 }

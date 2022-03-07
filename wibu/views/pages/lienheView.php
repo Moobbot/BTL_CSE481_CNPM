@@ -1,7 +1,6 @@
-<div class="main-area ">
+<div class="main-area">
     <!--* slider Start -->
-    <div class="slider-area-2" style="margin-left: -117px; margin-right: -117px;"
-        data-background="./public/lo-trinh-bus-30-tphcm-1.jpg">
+    <div class="slider-area-2" data-background="assets/img/hero/hero2.png">
         <div class="slider-height-2 d-flex align-items-center">
             <div class="container">
                 <div class="row">
@@ -18,17 +17,14 @@
     <!--* Contact Area start  -->
     <section class="contact-section">
         <div class="container">
-            <div class="row text-center">
-                <a href="https://goo.gl/maps/YX2dGDMntbzewzYJ8" target="_blank">
-                    <img class="img-fluid mb-5" src="./assets/img/gallery/truso.png" alt="Trụ sở xe khách wibu">
-                </a>
-            </div>
+            <a href="https://bitly.com.vn/v86yof" target="_blank">
+                <img class="img-fluid mb-5" src="./assets/img/gallery/truso.png" alt="Trụ sở Xe khách Wibu">
+            </a>
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="contact-title"> Góp ý </h2>
                     <div class="row">
-                        <form class="form-contact col-lg-8 mb-3" action="lienhe" method="POST"
-                            >
+                        <form role="form" class="form-contact col-lg-8 mb-3" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-lg-12 mb-5">
                                     <h3 class="form-title mb-4">
@@ -39,10 +35,7 @@
                                             Nội dung góp ý <span class="theme-color-4">*</span>
                                         </label>
                                         <div class="col-lg-8">
-                                            <textarea class="col-12 form-control" name="message" id="message" cols="30"
-                                                rows="10" onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Nội dung góp ý'"
-                                                placeholder="Nội dung góp ý" required></textarea>
+                                            <textarea class="col-12 form-control" name="message" id="message" cols="30" rows="10" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nội dung góp ý'" placeholder="Nội dung góp ý" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -57,9 +50,7 @@
                                             Họ và tên <span class="theme-color-4">*</span>
                                         </label>
                                         <div class="col-lg-8 mb-3">
-                                            <input class="form-control" type="text" onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Nhập họ tên của bạn'"
-                                                placeholder="Nhập họ tên của bạn" name="name" required>
+                                            <input class="form-control" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập họ tên của bạn'" placeholder="Nhập họ tên của bạn">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -67,9 +58,7 @@
                                             Email <span class="theme-color-4">*</span>
                                         </label>
                                         <div class="col-lg-8 mb-3">
-                                            <input class="form-control" type="email" onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Nhập email của bạn'" placeholder="Email"
-                                                name="email" required>
+                                            <input class="form-control" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập email của bạn'" placeholder="Email">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -77,34 +66,32 @@
                                             Chủ đề <span class="theme-color-4">*</span>
                                         </label>
                                         <div class="col-lg-8 mb-3">
-                                            <input class="form-control" type="text" onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Nhập chủ đề'" placeholder="Nhập chủ đề"
-                                                name="topic" required>
+                                            <input class="form-control" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập chủ đề'" placeholder="Nhập chủ đề">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn button boxed-btn" name = "sendemail">Send</button>
+                            <button type="submit" class="btn button boxed-btn">Send</button>
                         </form>
                         <div class="col-lg-3 offset-lg-1">
                             <div class="contact-info d-flex p-3">
                                 <span class="contact-info__icon"><i class="ti-home"></i></span>
                                 <div class="media-body">
-                                    <h3>Điểm trung chuyển cầu giấy</h3>
-                                    <p>Ngọc Khánh, Đống Đa, Hà Nội, Việt Nam</p>
+                                    <h3>Cổ Nhuế, thành phố Hà Nội</h3>
+                                    <p>0CT3C khu đô thị Handiresco</p>
                                 </div>
                             </div>
                             <div class="contact-info d-flex p-3">
                                 <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                                 <div class="media-body">
                                     <h3>0975729750</h3>
-                                    <p>Thứ Hai đến Thứ Sáu, 5 giờ sáng đến 21 giờ tối</p>
+                                    <p>Thứ Hai đến Thứ Sáu, 9 giờ sáng đến 6 giờ chiều</p>
                                 </div>
                             </div>
                             <div class="contact-info d-flex p-3">
                                 <span class="contact-info__icon"><i class="ti-email"></i></span>
                                 <div class="media-body">
-                                    <h3>buslientinh@gmail.com</h3>
+                                    <h3>zalalaundry.vn@gmail.com</h3>
                                     <p>Gửi cho chúng tôi câu hỏi của bạn bất cứ lúc nào!</p>
                                 </div>
                             </div>
