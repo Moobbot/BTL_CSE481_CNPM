@@ -22,13 +22,13 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 mb-30">
                     <div class="footer-tittle">
-                        <h4 class="mb-30">Dịch vụ</h4>
+                        <h4 class="mb-30">Giới thiệu</h4>
                         <ul>
-                            <li><a>- Dry Cleaning</a></li>
-                            <li><a>- Dry Clean</a></li>
-                            <li><a>- Ironing Services</a></li>
-                            <li><a>- Laundry Service London</a></li>
-                            <li><a>- Laundry App</a></li>
+                            <li><a>- Về chúng tôi</a></li>
+                            <li><a>- Nhà xe</a></li>
+                            <li><a>- Tuyến đường</a></li>
+                            <li><a>- Hỗ trợ</a></li>
+                            <li><a>- Chứng nhận</a></li>
                         </ul>
                     </div>
                 </div>
@@ -36,9 +36,9 @@
                     <div class="footer-tittle">
                         <h4 class="mb-30">Liên hệ</h4>
                         <ul>
-                            <li class="number"><a>(+84) 975729750</a></li>
-                            <li><a>zalalaundry.vn@gmail.com</a></li>
-                            <li><a>OCT3C khu đô thị Handiresco Cổ Nhuế, thành phố Hà Nội</a></li>
+                            <li class="number"><a>(+84) 33345198</a></li>
+                            <li><a>wibuxekhach.vn@gmail.com</a></li>
+                            <li><a>175 Tây Sơn, Trung Liệt, Đống Đa, Hà Nội</a></li>
                         </ul>
                     </div>
                 </div>

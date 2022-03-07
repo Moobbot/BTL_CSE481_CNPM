@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Wibu Xe khách Admin| Teamplate</title>
+    <title>Wibu Admin | Teamplate</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -20,18 +20,16 @@
 
 <body>
     <?php
-    include_once('wibu/views/blocks/load_and_up.php');
-    include_once('wibu/views/blocks/header.php');
+    require_once('wibu/views/blocks/load_and_up.php');
+    require_once('wibu/views/blocks/header.php');
     ?>
-    <div class="container" style="height: 95vh;">
+    <div class="container-fluid p-0" style="min-height: 95vh;">
         <?php
-        while ($row = mysqli_fetch_array($data["Nhaxe"])) {
-            echo $row["ten_nhaxe"] . "<br/>";
-        }
+        require_once("wibu/views/pages/" . $data["Page"] . ".php");
         ?>
     </div>
     <!-- Footer Start-->
-    <?php include_once('wibu/views/blocks/footer.php'); ?>
+    <?php require_once('wibu/views/blocks/footer.php'); ?>
 
     <!-- Footer End-->
     <!-- JS here -->
