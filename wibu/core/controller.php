@@ -16,7 +16,9 @@ class Controller
     }
 
     //hàm gọi gửi email
-    public function send($data = []){
-        
+    public function sendController($data){
+        if($data["form"]){
+            require_once "./wibu/core/email/sendFeedback.php";
+        }
     }
 }

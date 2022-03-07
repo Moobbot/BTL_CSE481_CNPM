@@ -27,7 +27,7 @@
                 <div class="col-lg-12">
                     <h2 class="contact-title"> Góp ý </h2>
                     <div class="row">
-                        <form class="form-contact col-lg-8 mb-3" action="lienhe/sendemail" method="POST"
+                        <form class="form-contact col-lg-8 mb-3" action="lienhe" method="POST"
                             >
                             <div class="row">
                                 <div class="col-lg-12 mb-5">
