@@ -8,7 +8,18 @@ class nhaxe_chitiet extends Controller
             "page_khach",
             [
                 "Page" => "nhaxe_chitietView",
-                "Nhaxe" => $nhaxe->Nhaxe()
+                "Nhaxe" => $nhaxe->Getnhaxe()
+            ]
+        );
+    }
+    function Show($id)
+    {
+        $nhaxe = $this->model("nxchitietModel");
+        $this->view(
+            "page_khach",
+            [
+                "Page" => "nhaxe_chitietView",
+                "Nhaxe" => $nhaxe->Getnhaxe($id)
             ]
         );
     }
