@@ -33,7 +33,7 @@ try {
 
     $mail->addReplyTo('loofehtt@gmail.com', 'Xác nhận huỷ vé');
 
-    $mail->addAddress("$email"); // Đây là địa chỉ Email người nhận > sau này sẽ là BIẾN
+    $mail->addAddress($data["email"]); // Đây là địa chỉ Email người nhận > sau này sẽ là BIẾN
 
     // Tiêu đề Email là gì?
     $mail->isHTML(true);   // Set email format to HTML

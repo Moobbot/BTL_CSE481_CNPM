@@ -1,7 +1,7 @@
 <?php require_once "./wibu/views/pages/" . $data["Page"] . ".php"; ?>
 
 <div class="container w-75 mt-5">
-    <form action="sendhuy" method="POST">
+    <form action="" method="POST">
         <fieldset class="border border-dark rounded-3 p-3">
             <legend class="float-none w-auto px-3">Thông tin người đặt:</legend>
             <?php
@@ -48,10 +48,10 @@
             ?>
 
             <div class="d-flex justify-content-center pt-5">
-                <div class="col-2 text-center">
+                <div class="text-center">
                     <button type="button" class="btn btn-danger px-4">Huỷ</button>
                 </div>
-                <div class="col-2 text-center">
+                <div class="text-center">
                     <button name="huyve" type="submit" class="btn btn-primary">Xác nhận huỷ vé</button>
                 </div>
             </div>
