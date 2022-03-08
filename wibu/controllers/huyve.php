@@ -8,28 +8,31 @@ class huyve extends Controller
             "khongview",
             [
                 "Page" => "huyveView",
-                "Mave" => $mave->GetMave($id)
+                "Mave" => $mave->GetMave($id),
             ]
         );
-
         $form = false;
-        if (isset($_POST["huyve"])) {
+        // echo $_POST["name"];
+        if (isset($_POST["sendemail"])) {
             $form = true;
             $name = $_POST["name"];
             $sdt = $_POST["sdt"];
-            $mave = $_POST["mave"];
+            $ma_ve = $_POST["mave"];
             $email = $_POST["email"];
+            // echo $email;
+            echo $_POST["name"];
 
-            $mave->HuyVe($id);
-            $this->sendmailhuy(
-                [
-                    "form" => $form,
-                    "name" => $name,
-                    "sdt" => $sdt,
-                    "mave" => $mave,
-                    "email" => $email
-                ]
-            );
+            // $mave->HuyVe($ma_ve);
+
+            // $this->sendmailhuy(
+            //     [
+            //         "form" => $form,
+            //         "name" => $name,
+            //         "sdt" => $sdt,
+            //         "mave" => $ma_ve,
+            //         "email" => $email
+            //     ]
+            // );
         }
     }
 }
