@@ -82,7 +82,7 @@
 
                 <div class="d-flex justify-content-center pt-5">
                     <div class="col-2 text-center">
-                        <button type="submit" name="btnhuy" class="btn btn-danger px-4">Huỷ</button>
+                        <a href="./" type="submit" name="btnhuy" class="btn btn-danger px-4">Huỷ</a>
                     </div>
                     <div class="col-2 text-center">
                         <button type="submit" name="btnthanhtoan" class="btn btn-primary">Thanh toán</button>
