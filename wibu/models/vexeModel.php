@@ -11,9 +11,7 @@ class vexeModel extends Database
 
         $result = false;
         if (mysqli_query($this->con, $sql)) {
-            $result = true;
+            require_once "./wibu/core/email/sendVexe.php";
         }
-
-        return json_encode($result);
     }
 }
