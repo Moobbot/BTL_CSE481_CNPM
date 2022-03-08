@@ -10,7 +10,7 @@
                         </div>
                         <!-- Slogan -->
                         <div class="footer-pera">
-                            <p>Wibu là một nền tảng online mà người dùng có thể tìm kiếm và lựa chọn địa điểm đón là một cách thuận tiện, nhanh chóng.</p>
+                            <p>Wibu là một nền tảng online mà người dùng có thể tìm kiếm và lựa chọn địa điểm đón là một cách thuận tiện, nhanh chóng, an toàn.</p>
                         </div>
                         <!-- social -->
                         <div class="footer-social">

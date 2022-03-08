@@ -1,3 +1,9 @@
+<?php
+// if (!isset($_SESSION['current_user'])) {
+//     header("location:login_admin.php");
+// }
+// $client_user = $_SESSION['current_user'];
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -15,23 +21,20 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="./assets/css/themify-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style_admin.css">
+    <!-- Datatable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 </head>
 
-<body>
+<body id="body-pd">
     <?php
     require_once('wibu/views/blocks/load_and_up.php');
-    require_once('wibu/views/blocks/header.php');
     ?>
     <div class="container-fluid p-0" style="min-height: 95vh;">
         <?php
         require_once("wibu/views/pages/" . $data["Page"] . ".php");
         ?>
     </div>
-    <!-- Footer Start-->
-    <?php require_once('wibu/views/blocks/footer.php'); ?>
-
-    <!-- Footer End-->
     <!-- JS here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap-->
@@ -39,7 +42,10 @@
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
-
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!-- Sidebar -->
+    <script src="./assets/js/sidebarjs.js"></script>
     <!-- Jquery Plugins, main Jquery -->
     <!-- //*Tránh các lỗi về giao diện điều khiển trong các trình duyệt thiếu bảng điều khiển. -->
     <script src="./assets/js/plugins.js"></script>

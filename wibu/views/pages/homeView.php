@@ -15,7 +15,7 @@
                                     <p>
                                         Chúng tôi đem đến những chuyến đi bình an
                                     </p>
-                                    <a href="#service" class="btn hero-btn">Khám phá ngay!</a>
+                                    <!-- <a href="#service" class="btn hero-btn">Khám phá ngay!</a> -->
                                 </div>
                             </div>
                         </div>
@@ -151,12 +151,5 @@
             </div>
         </section>
         <!-- Nhà xe End -->
-        <!--* About Area  -->
-        <section class="map-area">
-            <div class="map-wapper d-flex justify-content-center">
-                <img src="assets/img/gallery/truso.png" alt="" style="width: 80%;">
-            </div>
-        </section>
-        <!-- About Area End -->
     </div>
 </main>
