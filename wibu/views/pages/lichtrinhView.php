@@ -9,24 +9,30 @@
                         <div class="row justify-content-center">
                             <div class="hero-text">
                                 <div class="row d-flex justify-content-center align-items-center">
-                                    <div class="col-xl-4 flex-fill col-lg-9 col-md-10 col-sm-9 mb-2">
-                                        <select class="form-select form-control-lg" aria-label="Default select example">
+                                    <div class="input-group">
+                                        <select class="form-select" id="inputGroupSelect04"
+                                            aria-label="Example select with button addon">
                                             <option selected>Điểm đi</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <?php
+                                            while ($row = mysqli_fetch_array($data["Tuyendi"])) {
+                                            ?>
+                                            <option value=""><?php echo $row["diemdi_tuyenduong"] ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
-                                    </div>
-                                    <div class="col-xl-4 flex-fill col-lg-9 col-md-10 col-sm-9 mb-2">
-                                        <select class="form-select form-control-lg" aria-label="Default select example">
+                                        <select class="form-select" id="inputGroupSelect04"
+                                            aria-label="Example select with button addon">
                                             <option selected>Điểm đến</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <?php
+                                            while ($row = mysqli_fetch_array($data["Tuyenden"])) {
+                                            ?>
+                                            <option value=""><?php echo $row["diemden_tuyenduong"] ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
-                                    </div>
-                                    <div class="col-4  mt-3 mb-3 d-flex justify-content-center">
-                                        <button type="button" class="btn btn-primary ">Tìm</button>
+                                        <button class="btn btn-outline-secondary" type="button">Button</button>
                                     </div>
                                 </div>
                             </div>
@@ -101,13 +107,34 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <div class="mb-1">Tên nhà xe: <?php echo $row["ten_nhaxe"] ?></div>
-                                    <div class="mb-1">Số ghế trong: <?php echo $row["soghetrong"] ?></div>
-                                    <div class="my-1">Thời gian chuyến: <?php echo $row["giodi_chuyenxe"] ?></div>
-                                    <div class="my-1">Từ: <?php echo $row["diemdi_tuyenduong"]?> - <?php echo $row["diemden_tuyenduong"]?></div>
-                                    <div class="my-1">Giá tiền: <?php echo $row["giatien_chuyenxe"]?>.000đ</div>
-                                    <div class="my-1">
-                                        <button>Đặt vé</button>
+                                    <div class="row ">
+                                        <div class="col-7">
+                                            <div class="mb-1">Tên nhà xe: <?php echo $row["ten_nhaxe"] ?></div>
+                                            <div class="my-1">Từ: <br>
+                                                <div class="ms-2">
+                                                    <i class="fas fa-map-marker"></i>
+                                                    <?php echo $row["diemdi_tuyenduong"]?> -
+                                                    <i class="fas fa-map-marker"></i>
+                                                    <?php echo $row["diemden_tuyenduong"]?>
+                                                </div>
+                                            </div>
+                                            <div class="my-1">Thời gian:
+                                                <?php echo $row["giodi_chuyenxe"] ?>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-1">
+
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="mb-1">Số ghế trống: <?php echo $row["soghetrong"] ?>
+                                            </div>
+                                            <div class="my-1">Giá tiền:
+                                                <?php echo $row["giatien_chuyenxe"]?>.000đ</div>
+                                            <div class="my-1">
+                                                <button>Đặt vé</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -116,6 +143,7 @@
                     <?php
                     }
                     ?>
+
                 </div>
             </div>
             <!-- Nhà xe Start -->
