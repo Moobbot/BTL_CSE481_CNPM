@@ -25,7 +25,7 @@
                             <a href="./nhaxe_danhsach"> Nhà xe </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"> Lịch trình </a>
+                            <a href="./lichtrinh"> Lịch trình </a>
                         </li>
                         <li class="nav-item">
                             <a href="./lienhe"> Liên hệ </a>
