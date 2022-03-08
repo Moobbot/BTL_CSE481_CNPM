@@ -23,4 +23,11 @@ class HomeModel extends Database
         $cx = "SELECT * FROM tuyenduong WHERE ma_tuyenduong < 5";
         return mysqli_query($this->con, $cx);
     }
+
+    public function GetLogin()
+    {
+        //connect DB
+        $cx = "SELECT * FROM taikhoan";
+        return mysqli_query($this->con, $cx);
+    }
 }
