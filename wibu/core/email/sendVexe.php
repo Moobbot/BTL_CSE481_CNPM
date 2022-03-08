@@ -43,14 +43,17 @@ require 'phpmailer/SMTP.php';
         // $mail->addAttachment('pdf/Giay_bao_mat_sau.pdf'); // Nếu bạn muốn đính kèm tệp tin gửi đi
         // Gửi thư
         if ($mail->send()) {
-
             ?>
-            <script>alert("Đăng kí thành công, thông tin đã gửi đến email của bạn")</script>
+            <script>
+            alert("Đăng kí thành công, thông tin đã gửi đến email của bạn");
+            </script>
             <?php
-            
+
         }
     } catch (Exception $e) {
         ?>
-            <script>alert("Có vấn đề xảy ra, vui lòng kiểm tra lại!")</script>
-        <?php
+            <script>
+            alert("Có vấn đề xảy ra, vui lòng kiểm tra lại!")
+            </script>
+<?php
     }
