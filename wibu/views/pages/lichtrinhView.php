@@ -11,6 +11,7 @@
                                 <div class="hero-text">
                                     <div class="row ">
                                         <div class="col-2">
+
                                         </div>
                                         <div class="col-4">
                                             <select class="form-select" aria-label="Default select example">
@@ -101,7 +102,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <div class="mb-1">a</div>
+                                        <div class="mb-1"></div>
                                         <div class="my-1">a</div>
                                         <div class="my-1">a</div>
                                         <div class="my-1">
