@@ -19,7 +19,7 @@
                             <a href="./" class="active"> Trang chủ </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"> Vé xe liên tỉnh </a>
+                            <a href="./datve"> Vé xe liên tỉnh </a>
                         </li>
                         <li class="nav-item">
                             <a href="./nhaxe_danhsach"> Nhà xe </a>
