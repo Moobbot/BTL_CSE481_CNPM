@@ -10,7 +10,7 @@
                     <i class="fas fa-chart-line nav_icon"></i>
                     <span class="nav_name">Home</span>
                 </a>
-                <a href="nhaxe.php" class="nav_link" id="class">
+                <a href="./admin/nhaxe" class="nav_link" id="class">
                     <i class="fas fa-school nav_icon"></i>
                     <span class="nav_name">Nhà xe</span>
                 </a>
@@ -24,7 +24,7 @@
                 <span class="d-none d-sm-inline mx-1">Admin</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-light text-small shadow">
-                <li><a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt me-3"></i> Thoát</a></li>
+                <li><a class="dropdown-item" href="logout"><i class="fas fa-sign-out-alt me-3"></i> Thoát</a></li>
             </ul>
         </div>
     </nav>
