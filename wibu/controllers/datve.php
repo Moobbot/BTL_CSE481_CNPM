@@ -28,9 +28,10 @@ class datve extends Controller
         }
         // Bước 2 insert datebase bảng vexe
         $kq = $this->vexeModel->Newdatve($username, $phone, $cccd, $address, $email);
-        echo $kq;
-
-
         // Bước 3 show "OK/Fail"(sendemail)
+        ?>
+        <a href="http://localhost/cnpm/BTL_CSE481_CNPM/"> Quay lại</a>
+        <?php
     }
+    
 }
