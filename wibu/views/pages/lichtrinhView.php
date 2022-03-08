@@ -1,5 +1,5 @@
 <main>
-    <div class="main-area">
+    <div class="main-area bg-light">
         <!--* slider Area Start-->
         <section class="slider-area hero-image-1 hero-overly">
             <div class="slider-active">
@@ -32,7 +32,7 @@
                                             }
                                             ?>
                                         </select>
-                                        <button class="btn btn-outline-secondary" type="button">Button</button>
+                                        <button class="btn btn-warning" type="button">Tìm</button>
                                     </div>
                                 </div>
                             </div>
@@ -95,12 +95,12 @@
                     </div>
                 </div>
 
-                <div class="mt-3 si-me border-start border-1 ms-lg-5"
+                <div class="mt-3 si-me border-start border-1  ms-lg-5"
                     style="width: 75%; border-color: #000 !important;">
                     <?php
                     while ($row = mysqli_fetch_array($data["Lichtrinh"])) {
                     ?>
-                    <div class="card mb-3" style="max-width: 700px;">
+                    <div class="card mb-3 border-dark " style="max-width: 700px;">
                         <div class="row g-0">
                             <div class="col-2 mt-2 mx-2">
                                 <img src="assets/img/gallery/xe.png" class="img-fluid rounded-start" alt="...">
@@ -109,30 +109,31 @@
                                 <div class="card-body">
                                     <div class="row ">
                                         <div class="col-7">
-                                            <div class="mb-1">Tên nhà xe: <?php echo $row["ten_nhaxe"] ?></div>
-                                            <div class="my-1">Từ: <br>
-                                                <div class="ms-2">
-                                                    <i class="fas fa-map-marker"></i>
-                                                    <?php echo $row["diemdi_tuyenduong"]?> -
-                                                    <i class="fas fa-map-marker"></i>
-                                                    <?php echo $row["diemden_tuyenduong"]?>
-                                                </div>
+                                            <div class="mb-1 fs-4">Tên nhà xe: 
+                                                <br>
+                                                <?php echo $row["ten_nhaxe"] ?></div>
+                                            <div class="my-2">
+                                                <i class="fas fa-map-marker me-2"></i>
+                                                <?php echo $row["diemdi_tuyenduong"]?>
+                                                <br>
+                                                <i class="fas fa-arrow-down"></i>
+                                                <br>
+                                                <i class="fas fa-map-marker me-2"></i>
+                                                <?php echo $row["diemden_tuyenduong"]?>
                                             </div>
-                                            <div class="my-1">Thời gian:
+                                            <div class="my-2">Thời gian:
                                                 <?php echo $row["giodi_chuyenxe"] ?>
-
                                             </div>
                                         </div>
                                         <div class="col-1">
-
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-4" style = 'margin-top: 80px'>
                                             <div class="mb-1">Số ghế trống: <?php echo $row["soghetrong"] ?>
                                             </div>
-                                            <div class="my-1">Giá tiền:
+                                            <div class="my-2 mt-2">Giá tiền:
                                                 <?php echo $row["giatien_chuyenxe"]?>.000đ</div>
-                                            <div class="my-1">
-                                                <button>Đặt vé</button>
+                                            <div class="my-2 mt-2">
+                                                <button class="btn btn-primary">Đặt vé</button>
                                             </div>
                                         </div>
                                     </div>
