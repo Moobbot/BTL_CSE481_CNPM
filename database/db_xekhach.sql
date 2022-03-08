@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2022 at 02:41 PM
+-- Generation Time: Mar 08, 2022 at 01:42 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -140,9 +140,9 @@ CREATE TABLE `tuyenduong` (
 --
 
 INSERT INTO `tuyenduong` (`ma_tuyenduong`, `diemdi_tuyenduong`, `diemden_tuyenduong`, `hinhanh_tuyenduong`) VALUES
-(1, 'Bắc Ninh', 'Hà Nội', '296231569849192448/2022/1/14/can-canh-6-loi-xuong-duong-vanh-dai-3-ha-noi-6-1636679138607497105721-16421616899791332490292.jpeg'),
-(2, 'Hà Nam ', 'Hải Phòng', 'files/f1/2019/04/14/tu-hai-phong-di-ha-nam-bao-nhieu-km-bb-baaacReZEd.jpg?v=1555241347703'),
-(3, 'hà Nội ', 'Thái Bình', 'files/f1/2019/03/30/tu-ha-noi-di-thai-binh-bao-nhieu-km-bb-baaac3YdLM.png?v=1553917584092'),
+(1, 'Bắc Ninh', 'Hà Nội', 'https://goo.gl/maps/TczxAkApUoMBm9m1A'),
+(2, 'Hà Nam ', 'Hải Phòng', 'https://goo.gl/maps/8q3TGmkdEburWHJPA'),
+(3, 'Hà Nội', 'Thái Bình', 'https://goo.gl/maps/FsABPTk3xP4zwysBA'),
 (4, 'Hà Nam', 'Thái Bình', 'upload/images/2021-1/article_img/2021-01-26/img-bgt-2021-duog-noi-1611630256-width540height360.jpg'),
 (5, 'Bắc Ninh', 'Hải Phòng', 'files/f1/2019/04/17/tu-hai-phong-di-bac-ninh-bao-nhieu-km-bb-baaac4waKz.jpg?v=1555489526228');
 
@@ -172,7 +172,24 @@ INSERT INTO `vexe` (`ma_ve`, `ma_chuyenxe`, `diemdon_khach`, `gia_ve`, `hoten_kh
 (2, 4, 'Hà Nam', 24, 'Nguyễn Đức Kiên', '0800001490', 'kien@gmail.com', 125900014),
 (3, 3, 'Hà Nội', 40, 'Nguyễn Văn Phú', '0945000199', 'phu@gmail.com', 120000000),
 (4, 2, 'Nguyễn Văn Long', 35, 'Ngô Đức Tâm', '0800001412', 'Tam@gmail.com', 125634823),
-(5, 5, 'Bắc Ninh', 35, 'Phạm Quang Dương', '0945120156', 'duong.gmail.com', 120000011);
+(5, 5, 'Bắc Ninh', 35, 'Phạm Quang Dương', '0945120156', 'duong.gmail.com', 120000011),
+(6, 1, 'dsa', 0, 'helo', 'sad', 'sad', 0),
+(7, 1, 'KTX Đại Học Thủy Lợi', 0, 'fdsaf', '+8476636672', 'ngotam24082001@gmail.com', 452854);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vw_chuyenxechay`
+-- (See below for the actual view)
+--
+CREATE TABLE `vw_chuyenxechay` (
+`ten_nhaxe` varchar(30)
+,`soghetrong` int(11) unsigned
+,`giodi_chuyenxe` time
+,`diemdi_tuyenduong` text
+,`diemden_tuyenduong` text
+,`giatien_chuyenxe` int(11)
+);
 
 -- --------------------------------------------------------
 
@@ -202,6 +219,15 @@ INSERT INTO `xe` (`ma_xe`, `ma_nhaxe`, `bienso_xe`, `soghe_xe`) VALUES
 (8, 3, '17B54621', 50),
 (9, 4, '90B25299', 50),
 (10, 5, '16B78722', 50);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vw_chuyenxechay`
+--
+DROP TABLE IF EXISTS `vw_chuyenxechay`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_chuyenxechay`  AS SELECT `nhaxe`.`ten_nhaxe` AS `ten_nhaxe`, `chuyenxechay`.`soghetrong` AS `soghetrong`, `chuyenxe`.`giodi_chuyenxe` AS `giodi_chuyenxe`, `tuyenduong`.`diemdi_tuyenduong` AS `diemdi_tuyenduong`, `tuyenduong`.`diemden_tuyenduong` AS `diemden_tuyenduong`, `chuyenxe`.`giatien_chuyenxe` AS `giatien_chuyenxe` FROM ((((`chuyenxechay` join `xe` on(`chuyenxechay`.`ma_xe` = `xe`.`ma_xe`)) join `nhaxe` on(`xe`.`ma_nhaxe` = `nhaxe`.`ma_nhaxe`)) join `chuyenxe` on(`chuyenxechay`.`ma_chuyenxe` = `chuyenxe`.`ma_chuyenxe`)) join `tuyenduong` on(`chuyenxe`.`ma_tuyenduong` = `tuyenduong`.`ma_tuyenduong`)) WHERE `chuyenxechay`.`trangthai` like 0 AND `chuyenxechay`.`soghetrong` > 0 ;
 
 --
 -- Indexes for dumped tables
@@ -273,7 +299,7 @@ ALTER TABLE `tuyenduong`
 -- AUTO_INCREMENT for table `vexe`
 --
 ALTER TABLE `vexe`
-  MODIFY `ma_ve` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ma_ve` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `xe`
