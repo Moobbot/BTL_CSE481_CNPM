@@ -16,7 +16,7 @@
                                             <?php
                                             while ($row = mysqli_fetch_array($data["Tuyendi"])) {
                                             ?>
-                                                <option value=""><?php echo $row["diemdi_tuyenduong"] ?></option>
+                                            <option value=""><?php echo $row["diemdi_tuyenduong"] ?></option>
                                             <?php
                                             }
                                             ?>
@@ -27,7 +27,7 @@
                                             <?php
                                             while ($row = mysqli_fetch_array($data["Tuyenden"])) {
                                             ?>
-                                                <option value=""><?php echo $row["diemden_tuyenduong"] ?></option>
+                                            <option value=""><?php echo $row["diemden_tuyenduong"] ?></option>
                                             <?php
                                             }
                                             ?>
@@ -107,17 +107,34 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <div class="mb-1">Tên nhà xe: <?php echo $row["ten_nhaxe"] ?></div>
-                                    <div class="mb-1">Số ghế trong: <?php echo $row["soghetrong"] ?>
-                                    </div>
-                                    <div class="my-1">Thời gian chuyến:
-                                        <?php echo $row["giodi_chuyenxe"] ?></div>
-                                    <div class="my-1">Từ: <?php echo $row["diemdi_tuyenduong"]?> -
-                                        <?php echo $row["diemden_tuyenduong"]?></div>
-                                    <div class="my-1">Giá tiền:
-                                        <?php echo $row["giatien_chuyenxe"]?>.000đ</div>
-                                    <div class="my-1">
-                                        <button>Đặt vé</button>
+                                    <div class="row ">
+                                        <div class="col-7">
+                                            <div class="mb-1">Tên nhà xe: <?php echo $row["ten_nhaxe"] ?></div>
+                                            <div class="my-1">Từ: <br>
+                                                <div class="ms-2">
+                                                    <i class="fas fa-map-marker"></i>
+                                                    <?php echo $row["diemdi_tuyenduong"]?> -
+                                                    <i class="fas fa-map-marker"></i>
+                                                    <?php echo $row["diemden_tuyenduong"]?>
+                                                </div>
+                                            </div>
+                                            <div class="my-1">Thời gian:
+                                                <?php echo $row["giodi_chuyenxe"] ?>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-1">
+
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="mb-1">Số ghế trống: <?php echo $row["soghetrong"] ?>
+                                            </div>
+                                            <div class="my-1">Giá tiền:
+                                                <?php echo $row["giatien_chuyenxe"]?>.000đ</div>
+                                            <div class="my-1">
+                                                <button>Đặt vé</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -126,6 +143,7 @@
                     <?php
                     }
                     ?>
+
                 </div>
             </div>
             <!-- Nhà xe Start -->
