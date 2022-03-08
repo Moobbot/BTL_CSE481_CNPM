@@ -153,24 +153,33 @@ if (isset($_POST['btnSave'])) {
     $sodt = $_POST['sodt_nhaxe'];
     $dc = $_POST['dc_nhaxe'];
     $mota = $_POST['mota_nhaxe'];
-    $sql2 = "INSERT INTO `nhaxe`(`ten_nhaxe`, `sdt_nhaxe`, `diachi_nhaxe`, `mota_nhaxe`) VALUES ('$ten','$sodt','$dc','$mota')";
-
-    $result = mysqli_query($conn, $sql2);
-
-    if ($result > 0) {
-?>
-    <script>
-        window.location.href = 'nhaxe.php';
-    </script>
+    if($ten == '' || $sodt == ''|| $dc == '' || $mota == ''){?>
+        <script>
+            alert('Bạn cần phải nhập đầy đủ thông tin');
+        </script>
 <?php
-    } else {
-        echo "Lỗi!";
+    }else{
+
+        $sql2 = "INSERT INTO `nhaxe`(`ten_nhaxe`, `sdt_nhaxe`, `diachi_nhaxe`, `mota_nhaxe`) VALUES ('$ten','$sodt','$dc','$mota')";
+    
+        $result = mysqli_query($conn, $sql2);
+    
+        if ($result > 0) {
+    ?>
+        <script>
+            window.location.href = 'nhaxe.php';
+        </script>
+    <?php
+        } else {
+            echo "Lỗi!";
+        }
+    
+        mysqli_close($conn);
     }
-
-    mysqli_close($conn);
+    
 }
-
-?>
+    ?>
+    
 <?php
 include './footer_admin.php';
 ?>

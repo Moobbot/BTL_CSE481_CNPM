@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Quản lý học sinh THPT</title>
+    <title>Quản lý xe khách</title>
 </head>
 <style>
     .gradient-custom-3 {
@@ -40,15 +40,15 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="card" style="border-radius: 15px;">
                                 <div class="card-body p-5">
-                                    <h2 class="text-uppercase text-center mb-5">account login</h2>
+                                    <h2 class="text-uppercase text-center mb-5">Đăng nhập</h2>
                                     <form id="login-form">
                                         <div class="form-outline mb-4">
                                             <input type="text" id="userName" class="form-control form-control-lg" name="userName">
-                                            <label class="form-label">user name</label>
+                                            <label class="form-label">Tài khoản</label>
                                         </div>
                                         <div class="form-outline mb-4">
                                             <input type="password" id="password" class="form-control form-control-lg" name="password">
-                                            <label class="form-label">password</label>
+                                            <label class="form-label">Mật khẩu</label>
                                         </div>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body btn-login" name="btnlogin">login</button>
