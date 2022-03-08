@@ -9,12 +9,6 @@ class lichtrinhModel extends Database
         return mysqli_query($this->con, $cx);
     }
 
-    public function GetTuyenduong()
-    {
-        //connect DB
-        $cx = "SELECT * FROM tuyenduong";
-        return mysqli_query($this->con, $cx);
-    }
     public function GetLichtrinh()
     {
         //connect DB
