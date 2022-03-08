@@ -27,7 +27,7 @@ require 'phpmailer/SMTP.php';
         $mail->CharSet = 'UTF-8';
 
         // Cấu hình thuộc tính hiển thị của người gửi - người nhận
-        $mail->setFrom('duya7k50@gmail.com', 'Thư feedback');
+        $mail->setFrom($data["email"], 'Thư feedback');
         // Tên hiển thị: TÊN CÁC BẠN, ví dụ: Nguyễn Sơn Lâm
 
         $mail->addReplyTo($data["email"], 'Xác nhận đăng kí tài khoản');
@@ -38,7 +38,7 @@ require 'phpmailer/SMTP.php';
         $mail->isHTML(true);   // Set email format to HTML
         $mail->Subject = '[Feedback]'.$data["topic"];
         // Nội dung Email
-        $mail->Body = $data["message"];
+        $mail->Body ="Tôi là: ".$data["name"]."\n".$data["message"];
         // Tệp tên đính kèm Email gửi đi
         // $mail->addAttachment('pdf/Giay_bao_mat_sau.pdf'); // Nếu bạn muốn đính kèm tệp tin gửi đi
         // Gửi thư
