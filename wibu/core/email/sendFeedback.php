@@ -38,7 +38,7 @@ require 'phpmailer/SMTP.php';
         $mail->isHTML(true);   // Set email format to HTML
         $mail->Subject = '[Feedback]'.$data["topic"];
         // Nội dung Email
-        $mail->Body ="Tôi là: ".$data["name"]."\n".$data["message"];
+        $mail->Body ="Tôi là: ".$data["name"].", Email: ".$data["email"]."\n".$data["message"];
         // Tệp tên đính kèm Email gửi đi
         // $mail->addAttachment('pdf/Giay_bao_mat_sau.pdf'); // Nếu bạn muốn đính kèm tệp tin gửi đi
         // Gửi thư
