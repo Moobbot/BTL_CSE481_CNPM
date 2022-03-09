@@ -10,8 +10,8 @@ class lichtrinh extends Controller
                 "Page" => "lichtrinhView",
                 "ThoigianCxe" => $lichtrinh->GetThoigianCxe(),
                 "Lichtrinh" => $lichtrinh->GetLichtrinh(),
-                "Tuyendi" => $lichtrinh->GetDuongDi(),
-                "Tuyenden" => $lichtrinh->GetDuongDen()
+                "Tuyenduong" => $lichtrinh->GetTuyenduong(),
+                "Tuyenduong2" => $lichtrinh->GetTuyenduong2()
             ]
         );
     }

@@ -14,4 +14,10 @@ class vexeModel extends Database
             require_once "./wibu/core/email/sendVexe.php";
         }
     }
+    public function GetLichtrinh($a)
+    {
+        //connect DB
+        $cxc = "SELECT * FROM  vw_chuyenxechay";
+        return mysqli_query($this->con, $cxc);
+    }
 }

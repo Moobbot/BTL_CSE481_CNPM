@@ -16,6 +16,16 @@ class datve extends Controller
             ]
         );
     }
+    // public function trangdatve($a)
+    // {
+    //     $this->view(
+    //         "khongview",
+    //         [
+    //             "Page" => "nhaxe_chitietView",
+    //             "Lichtrinh" => $this->vexeModel->GetLichtrinh($a)
+    //         ]
+    //     );
+    // }
     public function khachhangdatve()
     {
         // Bước 1 get data khách hàng nhập
@@ -29,9 +39,8 @@ class datve extends Controller
         // Bước 2 insert datebase bảng vexe
         $kq = $this->vexeModel->Newdatve($username, $phone, $cccd, $address, $email);
         // Bước 3 show "OK/Fail"(sendemail)
-        ?>
-        <a href="http://localhost/cnpm/BTL_CSE481_CNPM/"> Quay lại</a>
-        <?php
+?>
+        <a href="http://localhost/BTL_CSE481_CNPM/"> Quay lại</a>
+<?php
     }
-    
 }
