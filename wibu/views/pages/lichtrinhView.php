@@ -1,5 +1,5 @@
 <main>
-    <div class="main-area">
+    <div class="main-area bg-light">
         <!--* slider Area Start-->
         <section class="slider-area hero-image-1 hero-overly">
             <div class="slider-active">

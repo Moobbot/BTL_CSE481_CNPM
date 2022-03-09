@@ -26,4 +26,16 @@ class lichtrinhModel extends Database
         $cx = "SELECT * FROM tuyenduong";
         return mysqli_query($this->con, $cx);
     }
+
+    public function GetDuongDi()
+    {
+        $cx = "SELECT DISTINCT diemdi_tuyenduong FROM tuyenduong";
+        return mysqli_query($this->con, $cx);
+    }
+
+    public function GetDuongDen()
+    {
+        $cx = "SELECT DISTINCT diemden_tuyenduong FROM tuyenduong";
+        return mysqli_query($this->con, $cx);
+    }
 }
