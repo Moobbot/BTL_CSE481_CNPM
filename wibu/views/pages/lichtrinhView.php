@@ -43,7 +43,6 @@
         <style>
             @media(max-width: 990px) {
                 .hidden-x {
-                    /* display: none; */
                     width: 200px !important;
                 }
 
