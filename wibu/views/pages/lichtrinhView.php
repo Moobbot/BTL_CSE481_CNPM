@@ -9,24 +9,28 @@
                         <div class="row justify-content-center">
                             <div class="hero-text">
                                 <div class="row d-flex justify-content-center align-items-center">
-                                    <div class="col-xl-4 flex-fill col-lg-9 col-md-10 col-sm-9 mb-2">
-                                        <select class="form-select form-control-lg" aria-label="Default select example">
+                                    <div class="input-group">
+                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                                             <option selected>Điểm đi</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <?php
+                                            while ($row = mysqli_fetch_array($data["Tuyenduong"])) {
+                                            ?>
+                                                <option value=""><?= $row["diemdi_tuyenduong"] ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
-                                    </div>
-                                    <div class="col-xl-4 flex-fill col-lg-9 col-md-10 col-sm-9 mb-2">
-                                        <select class="form-select form-control-lg" aria-label="Default select example">
+                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                                             <option selected>Điểm đến</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <?php
+                                            while ($row = mysqli_fetch_array($data["Tuyenduong2"])) {
+                                            ?>
+                                                <option value=""><?= $row["diemden_tuyenduong"] ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
-                                    </div>
-                                    <div class="col-4  mt-3 mb-3 d-flex justify-content-center">
-                                        <button type="button" class="btn btn-primary ">Tìm</button>
+                                        <button class="btn btn-warning" type="button">Tìm</button>
                                     </div>
                                 </div>
                             </div>
@@ -37,51 +41,50 @@
         </section>
         <!-- slider Area End-->
         <style>
-        @media(max-width: 990px) {
-            .hidden-x {
-                /* display: none; */
-                width: 200px !important;
+            @media(max-width: 990px) {
+                .hidden-x {
+                    /* display: none; */
+                    width: 200px !important;
+                }
+
+                .si-me {
+                    width: 60% !important;
+                }
             }
 
-            .si-me {
-                width: 60% !important;
-            }
-        }
+            @media(max-width: 520px) {
+                .hidden-x {
+                    display: none;
+                }
 
-        @media(max-width: 520px) {
-            .hidden-x {
-                display: none;
-            }
+                .si-me {
+                    width: 80% !important;
+                }
 
-            .si-me {
-                width: 80% !important;
+                .kq {
+                    display: flex;
+                    justify-content: center;
+                }
             }
-
-            .kq {
-                display: flex;
-                justify-content: center;
-            }
-        }
         </style>
         <div class="container-lg mt-4">
             <div class="row kq">
+                <!-- Thời gian -->
                 <div class="mt-3 hidden-x" style="width: 234px;">
                     <div class="d-flex flex-column border border-dark border-1 bg-wood" style="border-radius: 10%;">
                         <!-- //*Điều hướng -->
                         <a class="h4 text-dark text-center text-decoration-none mt-2">Thời gian</a>
                         <!-- //* Loại món ăn -->
-                        <ul class=" nav nav-pills align-items-center justify-content-center" id="pills-tab"
-                            role="tablist">
+                        <ul class=" nav nav-pills align-items-center justify-content-center" id="pills-tab" role="tablist">
                             <?php
                             while ($row = mysqli_fetch_array($data["ThoigianCxe"])) {
                             ?>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-black" type="button" role="tab">
-                                    <img src="assets/img/gallery/bus-car-icon.svg" class="me-2"
-                                        style="min-width: 1.375em;">
-                                    <?php echo $row["giodi_chuyenxe"] ?>
-                                </button>
-                            </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-black" type="button" role="tab">
+                                        <img src="assets/img/gallery/bus-car-icon.svg" class="me-2" style="min-width: 1.375em;">
+                                        <?= $row["giodi_chuyenxe"] ?>
+                                    </button>
+                                </li>
                             <?php
                             }
                             ?>
@@ -89,33 +92,61 @@
                     </div>
                 </div>
 
-                <div class="mt-3 si-me border-start border-1 ms-lg-5"
-                    style="width: 75%; border-color: #000 !important;">
+                <div class="mt-3 si-me border-start border-1 ms-lg-5" style="width: 75%; border-color: #000 !important;">
                     <?php
+                    $a = 0;
                     while ($row = mysqli_fetch_array($data["Lichtrinh"])) {
                     ?>
-                    <div class="card mb-3" style="max-width: 700px;">
-                        <div class="row g-0">
-                            <div class="col-2 mt-2 mx-2">
-                                <img src="assets/img/gallery/xe.png" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div class="mb-1">Tên nhà xe: <?php echo $row["ten_nhaxe"] ?></div>
-                                    <div class="mb-1">Số ghế trong: <?php echo $row["soghetrong"] ?></div>
-                                    <div class="my-1">Thời gian chuyến: <?php echo $row["giodi_chuyenxe"] ?></div>
-                                    <div class="my-1">Từ: <?php echo $row["diemdi_tuyenduong"]?> - <?php echo $row["diemden_tuyenduong"]?></div>
-                                    <div class="my-1">Giá tiền: <?php echo $row["giatien_chuyenxe"]?>.000đ</div>
-                                    <div class="my-1">
-                                        <button>Đặt vé</button>
+                        <div class="card mb-3 border-dark " style="max-width: 700px;">
+                            <div class="row g-0">
+                                <div class="col-2 mt-2 mx-2">
+                                    <img src="assets/img/gallery/xe.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-7">
+                                                <div class="mb-1 fs-4">Tên nhà xe:
+                                                    <br>
+                                                    <?= $row["ten_nhaxe"] ?>
+                                                </div>
+                                                <div class="my-2">
+                                                    <i class="fas fa-map-marker me-2"></i>
+                                                    <?= $row["diemdi_tuyenduong"] ?>
+                                                    <br>
+                                                    <i class="fas fa-arrow-down"></i>
+                                                    <br>
+                                                    <i class="fas fa-map-marker me-2"></i>
+                                                    <?= $row["diemden_tuyenduong"] ?>
+                                                </div>
+                                                <div class="my-2">Thời gian:
+                                                    <?= $row["giodi_chuyenxe"] ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="my-2 fs-4">Giá tiền:
+                                                    <?= $row["giatien_chuyenxe"] ?>.000đ
+                                                </div>
+                                                <div class="mt-5 pt-5">
+                                                    <span class="d-flex justify-content-end">Số ghế trống: <?= $row["soghetrong"] ?></span>
+                                                    <div class="mb-1 d-flex justify-content-end">
+                                                        <!-- <button class="btn btn-primary">Đặt vé</button> -->
+                                                        <!-- <a href="./datve/trangdatve/</?= $a ?>" class="btn btn-primary">Đặt vé</a> -->
+                                                        <a href="./datve" class="btn btn-primary">Đặt vé</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <?php
+                        $a++;
                     }
                     ?>
+
                 </div>
             </div>
             <!-- Nhà xe Start -->
