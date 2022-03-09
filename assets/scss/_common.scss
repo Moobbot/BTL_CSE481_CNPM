@@ -123,32 +123,36 @@ hr {
     padding: 0;
 }
 
-.btn {
-    color: #fff;
-    font-size: 18px;
-    padding: 16px 40px;
-    display: inline-block;
-    text-transform: capitalize;
-    border: none;
-    border-radius: 30px;
-    background-size: 200%;
-    background-image: linear-gradient(to left, #6785FF, rgb(81, 114, 245), #6785FF, );
-    background-position: right;
-    cursor: pointer;
-    transition: 0.6s;
-    i {
-        color: #fff;
-        font-size: 13px;
-        font-weight: 500;
-        position: relative;
-        left: 26px;
-        @include transition(.4s);
-    }
-}
-
+// .btn {
+//     color: #fff;
+//     font-size: 18px;
+//     padding: 16px 40px;
+//     display: inline-block;
+//     text-transform: capitalize;
+//     border: none;
+//     border-radius: 30px;
+//     background-size: 200%;
+//     background-image: linear-gradient(to left, #6785FF, rgb(81, 114, 245), #6785FF, );
+//     background-position: right;
+//     cursor: pointer;
+//     transition: 0.6s;
+//     i {
+//         color: #fff;
+//         font-size: 13px;
+//         font-weight: 500;
+//         position: relative;
+//         left: 26px;
+//         @include transition(.4s);
+//     }
+// }
 .btn:hover {
     color: #fff;
     background-position: left;
+}
+
+.card:hover {
+    box-shadow: 1px 8px 20px grey;
+    @include transform(box-shadow .6s ease-in);
 }
 
 .hidden {

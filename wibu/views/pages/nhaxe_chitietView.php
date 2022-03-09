@@ -1,7 +1,14 @@
+<?php
+$row = mysqli_fetch_array($data["Nhaxe"]);
+if ($row > 0) {
+    $name = $row['ten_nhaxe'];
+    $describe = $row['mota_nhaxe'];
+}
+?>
 <section class="offer-services mt-5" id="service">
     <div class="container">
         <div class="col-12 section-tittle my-4">
-            <h3>Nhà xe</h3>
+            <h3>Nhà xe <?= $name ?></h3>
         </div>
         <div class="row">
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -47,7 +54,8 @@
         <div class="row mt-2">
             <h5 class="mb-4">Thông tin chung</h5>
             <div class="text-justify">
-                Xe Sapa Express là hãng xe du lịch được sở hữu bởi Công ty TNHH Thịnh Phát đây là doanh nghiệp lớn hoạt động trong lĩnh vực vận tải và du lịch thành lập từ tháng 10/2012.Thương hiệu Sapa Express không ngừng lớn mạnh và phát triển, đến nay đã trở thành một trong những hãng xe được ưa chuộng nhất, uy tín nhất bởi sự sang trọng, đẳng cấp, và dịch vụ cực kỳ chuyên nghiệp của mình.
+            <?=  $describe ?>
+                <!-- Xe Sapa Express là hãng xe du lịch được sở hữu bởi Công ty TNHH Thịnh Phát đây là doanh nghiệp lớn hoạt động trong lĩnh vực vận tải và du lịch thành lập từ tháng 10/2012.Thương hiệu Sapa Express không ngừng lớn mạnh và phát triển, đến nay đã trở thành một trong những hãng xe được ưa chuộng nhất, uy tín nhất bởi sự sang trọng, đẳng cấp, và dịch vụ cực kỳ chuyên nghiệp của mình.
                 <br>
                 Loại xe:
                 <ul>
@@ -58,7 +66,7 @@
                         + Dòng xe giường nằm 38 chỗ( số giường ít nhất so với các nhà xe khác thường là 40-46 giường trên cùng một khung xe - nên cực kỳ rộng rãi, thoải mái), xe mới sạch sẽ đầy đủ tiện nghi, có nhà vệ sinh trên xe theo tiêu chuẩn Châu Âu. Đặc biệt trên hành trình Hà Nội - Sapa hành khách sẽ được hưởng miễn phí các tiện nghi và dịch vụ tốt nhất như: Wifi, đồ ăn nhẹ, có hướng dẫn viên tiếng việt và tiếng anh, có tủ lạnh mini, ổ sạc, ổ cắm USB mỗi ghế....
                     </li>
                 </ul>
-                Xe Sapa Express chỉ chở khách du lịch hoàn toàn không đón và bắt khách dọc đường. Hãng chỉ đón khách từ khu vực Phố Cổ - Hà Nội và hỗ trợ đón thêm một điểm tại ngã tư cao tốc Nội Bài-Lào Cai.
+                Xe Sapa Express chỉ chở khách du lịch hoàn toàn không đón và bắt khách dọc đường. Hãng chỉ đón khách từ khu vực Phố Cổ - Hà Nội và hỗ trợ đón thêm một điểm tại ngã tư cao tốc Nội Bài-Lào Cai. -->
             </div>
         </div>
     </div>

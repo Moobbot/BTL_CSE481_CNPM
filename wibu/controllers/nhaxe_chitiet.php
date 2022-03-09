@@ -12,4 +12,15 @@ class nhaxe_chitiet extends Controller
             ]
         );
     }
+    function Show($id)
+    {
+        $nhaxe = $this->model("nxchitietModel");
+        $this->view(
+            "khongview",
+            [
+                "Page" => "nhaxe_chitietView",
+                "Nhaxe" => $nhaxe->Getnhaxe($id)
+            ]
+        );
+    }
 }

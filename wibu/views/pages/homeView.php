@@ -15,7 +15,7 @@
                                     <p>
                                         Chúng tôi đem đến những chuyến đi bình an
                                     </p>
-                                    <a href="#service" class="btn hero-btn">Khám phá ngay!</a>
+                                    <!-- <a href="#service" class="btn hero-btn">Khám phá ngay!</a> -->
                                 </div>
                             </div>
                         </div>
@@ -27,6 +27,36 @@
         <!-- Nhà xe Start -->
         <section class="offer-services pb-5 my-5" id="service">
             <div class="container">
+                <!-- Tuyến đường -->
+                <div class="row g-0">
+                    <div class="col-12 section-tittle my-4">
+                        <h3>Tuyến đường phổ biến</h3>
+                    </div>
+                    <div class="row justify-content-between p-0 m-0">
+                        <?php
+                        while ($row = mysqli_fetch_array($data["Tuyenduong"])) {
+                        ?>
+                            <div class="card my-2 mx-3 px-0" style="width: 18.25em;">
+                                <a>
+                                    <!-- <img src="</?= $row["hinhanh_tuyenduong"] ?>" class="card-img-top" alt="..." /> -->
+                                    <img src="http://buildingwithpurpose.us/wp-content/uploads/2018/04/MienBac.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <ul class="p-0">
+                                                <li class="py-2">
+                                                    Lộ trình: <?php echo $row["diemdi_tuyenduong"] . " - " . $row["diemden_tuyenduong"] ?>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+                <!-- Nhà xe -->
                 <div class="row g-0">
                     <div class="col-12 section-tittle my-4">
                         <h3>Nhà xe nổi bật</h3>
@@ -57,13 +87,8 @@
                         }
                         ?>
                     </div>
+                </div>
 
-                </div>
-                <div class="row g-0">
-                    <div class="col-12 section-tittle my-4">
-                        <h3>Tuyến đường thường chạy</h3>
-                    </div>
-                </div>
                 <div class="row g-0">
                     <div class="col-12 section-tittle my-4">
                         <h3>Nền tảng kết nối người dùng và nhà xe</h3>
@@ -126,12 +151,5 @@
             </div>
         </section>
         <!-- Nhà xe End -->
-        <!--* About Area  -->
-        <section class="map-area">
-            <div class="map-wapper d-flex justify-content-center">
-                <img src="assets/img/gallery/truso.png" alt="" style="width: 80%;">
-            </div>
-        </section>
-        <!-- About Area End -->
     </div>
 </main>
