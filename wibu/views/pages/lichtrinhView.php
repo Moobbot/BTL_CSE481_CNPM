@@ -10,7 +10,7 @@
                             <div class="hero-text">
                                 <div class="row d-flex justify-content-center align-items-center">
                                     <div class="input-group">
-                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" style="max-width: 450px;">
                                             <option selected>Điểm đi</option>
                                             <?php
                                             while ($row = mysqli_fetch_array($data["Tuyenduong"])) {
@@ -20,7 +20,7 @@
                                             }
                                             ?>
                                         </select>
-                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" style="max-width: 450px;">
                                             <option selected>Điểm đến</option>
                                             <?php
                                             while ($row = mysqli_fetch_array($data["Tuyenduong2"])) {
@@ -30,7 +30,7 @@
                                             }
                                             ?>
                                         </select>
-                                        <button class="btn btn-warning" type="button">Tìm</button>
+                                        <button type="button" class="btn btn-warning" style="min-width: 100px;">Tìm</button>
                                     </div>
                                 </div>
                             </div>
