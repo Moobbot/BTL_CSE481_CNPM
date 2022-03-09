@@ -12,7 +12,7 @@ class adminModel extends Database
     public function InsertNhaxe()
     {
         //connect DB
-        $nx = "SELECT * FROM nhaxe";
+        $nx = "SELECT * FROM nhaxe"; //Lệnh Insert
         return mysqli_query($this->con, $nx);
     }
 

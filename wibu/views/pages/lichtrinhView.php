@@ -10,7 +10,7 @@
                             <div class="hero-text">
                                 <div class="row d-flex justify-content-center align-items-center">
                                     <div class="input-group">
-                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" style="max-width: 450px;">
                                             <option selected>Điểm đi</option>
                                             <?php
                                             while ($row = mysqli_fetch_array($data["Tuyenduong"])) {
@@ -20,7 +20,7 @@
                                             }
                                             ?>
                                         </select>
-                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" style="max-width: 450px;">
                                             <option selected>Điểm đến</option>
                                             <?php
                                             while ($row = mysqli_fetch_array($data["Tuyenduong2"])) {
@@ -30,7 +30,7 @@
                                             }
                                             ?>
                                         </select>
-                                        <button class="btn btn-warning" type="button">Tìm</button>
+                                        <button type="button" class="btn btn-warning" style="min-width: 100px;">Tìm</button>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
 
                 <div class="mt-3 si-me border-start border-1 ms-lg-5" style="width: 75%; border-color: #000 !important;">
                     <?php
-                    $a = 0;
+                 
                     while ($row = mysqli_fetch_array($data["Lichtrinh"])) {
                     ?>
                         <div class="card mb-3 border-dark " style="max-width: 700px;">
@@ -106,8 +106,9 @@
                                         <div class="row d-flex justify-content-between">
                                             <div class="col-7">
                                                 <div class="mb-1 fs-4">Tên nhà xe:
-                                                    <br>
+                                                   
                                                     <?= $row["ten_nhaxe"] ?>
+
                                                 </div>
                                                 <div class="my-2">
                                                     <i class="fas fa-map-marker me-2"></i>
@@ -131,7 +132,7 @@
                                                     <div class="mb-1 d-flex justify-content-end">
                                                         <!-- <button class="btn btn-primary">Đặt vé</button> -->
                                                         <!-- <a href="./datve/trangdatve/</?= $a ?>" class="btn btn-primary">Đặt vé</a> -->
-                                                        <a href="./datve" class="btn btn-primary">Đặt vé</a>
+                                                        <a href="./datve/lichtrinh/<?= $row["ma_chuyenxe"]?>" class="btn btn-primary">Đặt vé</a>
 
                                                     </div>
                                                 </div>
@@ -142,7 +143,7 @@
                             </div>
                         </div>
                     <?php
-                        $a++;
+                   
                     }
                     ?>
 

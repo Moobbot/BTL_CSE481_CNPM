@@ -1,7 +1,7 @@
 <?php
 class lichtrinh extends Controller
 {
-    function SayHi()
+    public function SayHi()
     {
         $lichtrinh = $this->model("lichtrinhModel");
         $this->view(
