@@ -1,58 +1,57 @@
-
 <div class="container w-75">
     <div class="d-flex justify-content-center">
-    <div class="mt-3 si-me  ms-lg-5 " >
-                    <?php
-                    $a = 0;
-                    while ($row = mysqli_fetch_array($data["Macx"])) {
-                        $a = $row['ma_chuyenxe'];
-                    ?>
+        <div class="mt-3 si-me  ms-lg-5 ">
+            <?php
+            $a = 0;
+            while ($row = mysqli_fetch_array($data["Macx"])) {
+                $a = $row['ma_chuyenxe'];
+            ?>
 
-                        <div class="card mb-3 border-dark " style="max-width: 700px;">
-                            <div class="row g-0">
-                                <div class="col-2 mt-2 mx-2">
-                                    <img src="../../assets/img/gallery/xe.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="card-body">
-                                        <div class="row d-flex justify-content-between">
-                                            <div class="col-7">
-                                                <div class="mb-1 fs-4">Tên nhà xe:
-                                                   
-                                                    <?= $row["ten_nhaxe"] ?>
-                                                </div>
-                                                <div class="my-2">
-                                                    <i class="fas fa-map-marker me-2"></i>
-                                                    <?= $row["diemdi_tuyenduong"] ?>
-                                                    <br>
-                                                    <i class="fas fa-arrow-down"></i>
-                                                    <br>
-                                                    <i class="fas fa-map-marker me-2"></i>
-                                                    <?= $row["diemden_tuyenduong"] ?>
-                                                </div>
-                                                <div class="my-2">Thời gian:
-                                                    <?= $row["giodi_chuyenxe"] ?>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
-                                                <div class="my-2 fs-4">Giá tiền:
-                                                    <?= $row["giatien_chuyenxe"] ?>.000đ
-                                                </div>
-                                                <div class="mt-5 pt-5">
-                                                    <span class="d-flex justify-content-end">Số ghế trống: <?= $row["soghetrong"] ?></span>
-                                                </div>
-                                            </div>
+                <div class="card mb-3 border-dark " style="max-width: 700px;">
+                    <div class="row g-0">
+                        <div class="col-2 mt-2 mx-2">
+                            <img src="../../assets/img/gallery/xe.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-7">
+                                        <div class="mb-1 fs-4">Tên nhà xe:
+
+                                            <?= $row["ten_nhaxe"] ?>
+                                        </div>
+                                        <div class="my-2">
+                                            <i class="fas fa-map-marker me-2"></i>
+                                            <?= $row["diemdi_tuyenduong"] ?>
+                                            <br>
+                                            <i class="fas fa-arrow-down"></i>
+                                            <br>
+                                            <i class="fas fa-map-marker me-2"></i>
+                                            <?= $row["diemden_tuyenduong"] ?>
+                                        </div>
+                                        <div class="my-2">Thời gian:
+                                            <?= $row["giodi_chuyenxe"] ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="my-2 fs-4">Giá tiền:
+                                            <?= $row["giatien_chuyenxe"] ?>.000đ
+                                        </div>
+                                        <div class="mt-5 pt-5">
+                                            <span class="d-flex justify-content-end">Số ghế trống: <?= $row["soghetrong"] ?></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php
-                      
-                    }
-                    ?>
+                    </div>
+                </div>
+            <?php
 
-    </div>
+            }
+            ?>
+
+        </div>
     </div>
 
 
@@ -106,10 +105,10 @@
 
                 <div class="d-flex justify-content-center pt-5">
                     <div class="col-2 text-center">
-                        <a href="./" type="submit" name="btnhuy" class="btn btn-danger px-4">Huỷ</a>
+                        <a href="../../" type="submit" name="btnhuy" class="btn btn-danger px-4">Huỷ</a>
                     </div>
                     <div class="col-2 text-center">
-                        <input type="hidden" name = "ma_chuyenxe"  value="<?php echo $a; ?>">
+                        <input type="hidden" name="ma_chuyenxe" value="<?php echo $a; ?>">
                         <button type="submit" name="btndatve" class="btn btn-primary">Đặt vé</button>
 
                     </div>
