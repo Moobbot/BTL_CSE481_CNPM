@@ -244,33 +244,6 @@ hr {
   padding: 0;
 }
 
-.btn {
-  color: #fff;
-  font-size: 18px;
-  padding: 16px 40px;
-  display: inline-block;
-  text-transform: capitalize;
-  border: none;
-  border-radius: 30px;
-  background-size: 200%;
-  background-image: -webkit-gradient(linear, right top, left top, from(#6785FF), color-stop(#5172f5), to(#6785FF));
-  background-image: linear-gradient(to left, #6785FF, #5172f5, #6785FF);
-  background-position: right;
-  cursor: pointer;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-}
-
-.btn i {
-  color: #fff;
-  font-size: 13px;
-  font-weight: 500;
-  position: relative;
-  left: 26px;
-  -webkit-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s;
-}
-
 .btn:hover {
   color: #fff;
   background-position: left;
@@ -501,7 +474,7 @@ hr {
   font-weight: 700;
   padding: 32px 20px;
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;

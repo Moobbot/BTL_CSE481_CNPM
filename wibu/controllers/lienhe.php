@@ -10,7 +10,7 @@ class lienhe extends Controller
             ]
         );
         $form = false;
-        if(isset($_POST["sendemail"])){
+        if (isset($_POST["sendemail"])) {
             $form = true;
             $message = $_POST["message"];
             $name = $_POST["name"];
@@ -18,11 +18,14 @@ class lienhe extends Controller
             $email = $_POST["email"];
 
             $this->sendController(
-             ["form" => $form,
-             "message"=>$message,
-             "name"=>$name,
-             "topic"=>$topic,
-             "email"=>$email]);
+                [
+                    "form" => $form,
+                    "message" => $message,
+                    "name" => $name,
+                    "topic" => $topic,
+                    "email" => $email
+                ]
+            );
         }
     }
 }

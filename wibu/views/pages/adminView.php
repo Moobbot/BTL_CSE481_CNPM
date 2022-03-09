@@ -1,88 +1,31 @@
-<main>
-    <div class="height-100 bg-light">
-        <div class="col py-3 ">
-            <div class="container">
-                <div class="row mt-3 pt-3 border-bottom border-light">
-                    <h2>Trang chủ</h2>
-                </div>
+<header class="header" id="header">
+    <div class="header_toggle "> <i class="fas fa-bars " style="color: #e35d6a;" id="header-toggle"></i> </div>
+</header>
+<div class="l-navbar" id="nav-bar" style="background-color: #e35d6a;">
+    <nav class="nav">
+        <div>
+            <span class=" nav_logo nav_logo-name"></span>
+            <div class="nav_list">
+                <a href="admin.php" class="nav_link" id="dashboard">
+                    <i class="fas fa-chart-line nav_icon"></i>
+                    <span class="nav_name">Home</span>
+                </a>
+                <a href="./admin/nhaxe" class="nav_link" id="class">
+                    <i class="fas fa-school nav_icon"></i>
+                    <span class="nav_name">Nhà xe</span>
+                </a>
 
-                <div class="row mt-3 py-md-5  justify-content-around">
-                    <div class="col-md-4 col-12 bg-info d-flex mb-2 rounded justify-content-center">
-                        <div class="mt-3 mb-3" style="font-size: 1.875rem"><i class="fas fa-user-graduate"></i></div>
-                        <div class="ps-3 my-3">
-                            <p>Nhà xe liên kết</p>
-                            <p class="text-center fw-bold fs-2">
-                                <?php
-
-                                $sql = "SELECT COUNT(ma_nhaxe) AS nx_sum FROM nhaxe;";
-                                $result = mysqli_query($con, $sql);
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                ?>
-                                        <?php echo $row['nx_sum']; ?>
-                                <?php
-                                    }
-                                }
-                                ?>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 bg-info d-flex mb-2 rounded justify-content-center">
-                        <div class="mt-3 mb-3" style="font-size: 1.875rem"><i class="fas fa-user-graduate"></i></div>
-                        <div class="ps-3 my-3">
-                            <p>Số xe hiện có</p>
-                            <p class="text-center fw-bold fs-2">
-                                <?php
-
-                                $sql = "SELECT COUNT(ma_xe) AS st_sum FROM xe;";
-                                $result = mysqli_query($con, $sql);
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                ?>
-                                        <?php echo $row['st_sum']; ?>
-                                <?php
-                                    }
-                                }
-                                ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3 justify-content-around">
-                    <div class="col-md-4 col-12 bg-info d-flex mb-2 rounded justify-content-center">
-                        <div class="mt-3 mb-3" style="font-size: 1.875rem"><i class="fas fa-school"></i></div>
-                        <div class="ps-3 my-3">
-                            <p>Tổng doanh thu</p>
-                            <p class="text-center fw-bold fs-2">
-                                
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 bg-info d-flex mb-2 rounded justify-content-center">
-                        <div class="mt-3 mb-3" style="font-size: 1.875rem"><i class="fas fa-book-open"></i></div>
-                        <div class="ps-3 my-3">
-                            <p>Tổng vé xe</p>
-                            <p class="text-center fw-bold fs-2">
-                                <?php
-
-                                $sql = "SELECT COUNT(ma_ve) AS st_sum FROM vexe;";
-                                $result = mysqli_query($con, $sql);
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                ?>
-                                        <?php echo $row['st_sum']; ?>
-                                <?php
-                                    }
-                                }
-                                ?>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-
         </div>
-
-    </div>
-</main>
+        <!-- <a href="#" class="nav_link"> <span class="nav_name">SignOut</span> </a> -->
+        <div class="dropdown pb-4 ps-2">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://avatars.githubusercontent.com/u/90234391?s=48&v=4" alt="hugenerd" class=" header_img rounded-circle">
+                <span class="d-none d-sm-inline mx-1">Admin</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-light text-small shadow">
+                <li><a class="dropdown-item" href="logout"><i class="fas fa-sign-out-alt me-3"></i> Thoát</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>

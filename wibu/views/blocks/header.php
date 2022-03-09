@@ -16,10 +16,7 @@
                 <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav text-start mx-auto">
                         <li class="nav-item active">
-                            <a href="./" class="active"> Trang chủ </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./datve"> Vé xe liên tỉnh </a>
+                            <a href="./"> Trang chủ </a>
                         </li>
                         <li class="nav-item">
                             <a href="./nhaxe_danhsach"> Nhà xe </a>
@@ -32,9 +29,9 @@
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="header-right">
-                    <a href="#" class="header-btn2">Đặt ngay!</a>
-                </div> -->
+                <div class="header-right" style="width: 150px;">
+                    <!-- <a href="#" class="header-btn2">Đặt ngay!</a> -->
+                </div>
             </nav>
         </div>
     </div>

@@ -1,17 +1,25 @@
 <?php
 class admin extends Controller
 {
-    function SayHi()
+    public function SayHi()
     {
-        // $admin = $this->model("adminModel");
+        $admin = $this->model("adminModel");
         $this->view(
             "page_admin",
             [
                 "Page" => "adminView",
-
-                // "Chuyenxe" => $admin->GetChuyenxe(),
-                // "Nhaxe" => $admin->GetNhaxe(),
-                // "Tuyenduong" => $admin->GetTuyenduong()
+                "Nhaxe" => $admin->GetNhaxe()
+            ]
+        );
+    }
+    public function nhaxe()
+    {
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin2",
+            [
+                "Page" => "nhaxeView",
+                "Nhaxe" => $admin->GetNhaxe()
             ]
         );
     }
