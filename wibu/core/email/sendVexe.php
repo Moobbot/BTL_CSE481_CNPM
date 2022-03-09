@@ -46,6 +46,7 @@ require 'phpmailer/SMTP.php';
             ?>
             <script>
             alert("Đăng kí thành công, thông tin đã gửi đến email của bạn");
+            header("location: home");
             </script>
             <?php
 
