@@ -13,6 +13,10 @@ class HuyveModel extends Database
     {
         //connect DB
         $qr = "DELETE FROM `vexe` WHERE ma_ve = '$id'";
-        return mysqli_query($this->con, $qr);
+        $result = false;
+        if (mysqli_query($this->con, $qr)) {
+            $result = true;
+        }
+        return $result;
     }
 }
