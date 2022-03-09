@@ -108,6 +108,7 @@
                                                 <div class="mb-1 fs-4">Tên nhà xe:
                                                    
                                                     <?= $row["ten_nhaxe"] ?>
+
                                                 </div>
                                                 <div class="my-2">
                                                     <i class="fas fa-map-marker me-2"></i>

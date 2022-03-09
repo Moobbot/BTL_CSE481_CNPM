@@ -27,6 +27,7 @@ class login_admin extends Controller
 
         // Bước 3 show "OK/Fail"
         if ($kq) {
+            echo $kq;
             // Chưa xử lý đăng nhập được
         }
     }

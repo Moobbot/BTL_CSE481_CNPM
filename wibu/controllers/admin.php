@@ -7,7 +7,7 @@ class admin extends Controller
         $this->view(
             "page_admin",
             [
-                "Page" => "adminView",
+                "Page" => "admin/admin_trangchuView",
                 "Nhaxe" => $admin->GetNhaxe()
             ]
         );
@@ -16,9 +16,9 @@ class admin extends Controller
     {
         $admin = $this->model("adminModel");
         $this->view(
-            "page_admin2",
+            "page_admin",
             [
-                "Page" => "nhaxeView",
+                "Page" => "admin/admin_nhaxeView",
                 "Nhaxe" => $admin->GetNhaxe()
             ]
         );
