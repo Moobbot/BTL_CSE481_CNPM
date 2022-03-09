@@ -105,9 +105,7 @@
                                     <div class="card-body">
                                         <div class="row d-flex justify-content-between">
                                             <div class="col-7">
-                                                <div class="mb-1 fs-4">Tên nhà xe:
-                                                    <br>
-                                                    <?= $row["ten_nhaxe"] ?>
+                                                <div class="mb-1 fs-4">Tên nhà xe: <?= $row["ten_nhaxe"] ?>
                                                 </div>
                                                 <div class="my-2">
                                                     <i class="fas fa-map-marker me-2"></i>
