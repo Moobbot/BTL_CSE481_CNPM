@@ -1,47 +1,70 @@
+
 <div class="container w-75">
-    <div class="">
-        <fieldset class="border border-dark rounded-3 p-3">
-            <legend class="float-none w-auto px-3 fw-bold">Thông tin chuyến xe</legend>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="https://megacar.vn/wp-content/uploads/2020/09/xe-kh%C3%A1ch-Qu%E1%BA%A3ng-Tr%E1%BB%8B-%C4%91i-L%C3%A2m-%C4%90%E1%BB%93ng-megabus-1.jpg" alt="" style="width: 70%;">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="" class="fs-3" id="Name_xekhach" style="font-weight: 600;">Xe khách Hoàng Hà</label>
-                        <br>
+    <div class="d-flex justify-content-center">
+    <div class="mt-3 si-me  ms-lg-5 " >
+                    <?php
+                    $a = 0;
+                    while ($row = mysqli_fetch_array($data["Macx"])) {
+                        $a = $row['ma_chuyenxe'];
+                    ?>
 
-                        <label for="" class="fs-5" id="Name_xekhach" style="font-weight: 600;">Xe khách 30 chỗ </label>
-                        <br>
-                        <label for="" class="fs-5" id="Name_xekhach" style="font-weight: 600;">Giờ khởi hành :
-                            15h30</label>
-                        <br>
-                        <div>
-                            <label for="" class="fs-5 px-3 pb-1  rounded border border-warning bg-warning" id="Name_xekhach" style="font-weight: 600;">Sạch sẽ</label>
-                            <label for="" class="fs-5 px-3  pb-1  rounded border border-warning bg-warning ms-3" id="Name_xekhach" style="font-weight: 600;">An toàn</label>
+                        <div class="card mb-3 border-dark " style="max-width: 700px;">
+                            <div class="row g-0">
+                                <div class="col-2 mt-2 mx-2">
+                                    <img src="../../assets/img/gallery/xe.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-7">
+                                                <div class="mb-1 fs-4">Tên nhà xe:
+                                                   
+                                                    <?= $row["ten_nhaxe"] ?>
+                                                </div>
+                                                <div class="my-2">
+                                                    <i class="fas fa-map-marker me-2"></i>
+                                                    <?= $row["diemdi_tuyenduong"] ?>
+                                                    <br>
+                                                    <i class="fas fa-arrow-down"></i>
+                                                    <br>
+                                                    <i class="fas fa-map-marker me-2"></i>
+                                                    <?= $row["diemden_tuyenduong"] ?>
+                                                </div>
+                                                <div class="my-2">Thời gian:
+                                                    <?= $row["giodi_chuyenxe"] ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="my-2 fs-4">Giá tiền:
+                                                    <?= $row["giatien_chuyenxe"] ?>.000đ
+                                                </div>
+                                                <div class="mt-5 pt-5">
+                                                    <span class="d-flex justify-content-end">Số ghế trống: <?= $row["soghetrong"] ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    <?php
+                      
+                    }
+                    ?>
 
-
-                        <div class="mt-2">
-                            <label for="" class="fs-5 px-3  pb-1 rounded border border-warning bg-warning" id="Name_xekhach" style="font-weight: 600;">Chất lượng</label>
-                            <label for="" class="fs-5 px-3 pb-1  rounded border border-warning bg-warning ms-3" id="Name_xekhach" style="font-weight: 600;">Trách nhiệm</label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </fieldset>
     </div>
+    </div>
+
 
     <!-- Form đặt vé -->
     <div>
-        <form class="mt-5" action="./datve/khachhangdatve" method="POST">
+        <form class="mt-5" action="../../datve/khachhangdatve" method="POST">
             <fieldset class="border border-dark rounded-3 p-3">
                 <legend class="float-none w-auto fw-bold px-3">Thông tin người đặt vé</legend>
                 <div class="row d-flex justify-content-between">
                     <div class="row mb-5">
                         <div class="ms-5">
-                            <label class="ms-2" for="" id="">Số lượng vé: </label> <input type="number" name="soluong" required>
+                            <!-- <label class="ms-2" for="" id="">Số lượng vé: </label> <input type="number" name="soluong" required> -->
                             <label class="ms-5" for="">Giá vé: 1000000 Đồng / Vé</label>
                         </div>
                     </div>
@@ -86,7 +109,9 @@
                         <a href="./" type="submit" name="btnhuy" class="btn btn-danger px-4">Huỷ</a>
                     </div>
                     <div class="col-2 text-center">
-                        <button type="submit" name="btnthanhtoan" class="btn btn-primary">Thanh toán</button>
+                        <input type="hidden" name = "ma_chuyenxe"  value="<?php echo $a; ?>">
+                        <button type="submit" name="btndatve" class="btn btn-primary">Đặt vé</button>
+
                     </div>
                 </div>
 
