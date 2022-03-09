@@ -49,7 +49,7 @@
 
             <div class="d-flex justify-content-center pt-5">
                 <div class="text-center">
-                    <button type="button" class="btn button boxed-btn me-2">Quay lại</button>
+                    <a href="../../" type="submit" name="btnhuy" class="btn button boxed-btn me-2">Quay lại</a>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn button boxed-btn" name="huy">Huỷ vé</button>
