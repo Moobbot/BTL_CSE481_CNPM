@@ -47,7 +47,7 @@
                     <div class="header-left">
                         <!-- Logo -->
                         <a href="#" class="navbar-brand logo">
-                            <img class="d-inline-block align-center img-fluid" src="./assets/img/logo/logo.png" alt="logo Wibu">
+                            <img class="d-inline-block align-center img-fluid" src="../../assets/img/logo/logo.png" alt="logo Wibu">
                             <span class="hidden">Wibu</span>
                         </a>
                     </div>
@@ -57,16 +57,16 @@
                     <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
                         <ul class="navbar-nav text-start mx-auto">
                             <li class="nav-item active">
-                                <a href="./"> Trang chủ </a>
+                                <a href="../../"> Trang chủ </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./nhaxe_danhsach"> Nhà xe </a>
+                                <a href="../../nhaxe_danhsach"> Nhà xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./lichtrinh"> Lịch trình </a>
+                                <a href="../../lichtrinh"> Lịch trình </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./lienhe"> Liên hệ </a>
+                                <a href="../../lienhe"> Liên hệ </a>
                             </li>
                         </ul>
                     </div>

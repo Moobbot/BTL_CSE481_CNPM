@@ -49,7 +49,13 @@
                                 <a href="./"> Xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Lịch trình </a>
+                                <a href="./"> Chuyến xe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./"> Chuyến xe chạy </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./"> Tuyến đường </a>
                             </li>
                         </ul>
                     </div>
