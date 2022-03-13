@@ -53,8 +53,8 @@
                     </div>
                     <form method="POST">
                         <div class="modal-body">
-                            
-                        <div class="mb-3">
+
+                            <div class="mb-3">
                                 <label for="subjectname" class="form-label">Điểm đi</label>
                                 <input type="text" class="form-control" name="sodt_nhaxe">
                             </div>
@@ -98,7 +98,7 @@
                             <th scope="row"><?php echo $row['ma_tuyenduong']; ?> </th>
                             <td><?php echo $row['diemdi_tuyenduong']; ?></td>
                             <td><?php echo $row['diemden_tuyenduong']; ?></td>
-                            <td><img src="<?php echo $row['hinhanh_tuyenduong']; ?>" alt=""></td>
+                            <td><img src="<?php echo $row['hinhanh_tuyenduong']; ?>" alt="" id="imgmap" style="height:80px"></td>
                             <td>
                                 <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_chuyenxechay"><i class="fas fa-user-edit"></i></a>
                                 <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
@@ -140,5 +140,23 @@
                 sortDescending: ": Message khi đang sắp xếp theo column",
             }
         },
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#imgmap').width(200);
+        $('#imgmap').mouseover(function() {
+            $(this).css("cursor", "pointer");
+        });
+        $("#imgmap").toggle(function() {
+                $(this).animate({
+                    width: "500px"
+                }, 'slow');
+            },
+            function() {
+                $(this).animate({
+                    width: "200px"
+                }, 'slow');
+            });
     });
 </script>
