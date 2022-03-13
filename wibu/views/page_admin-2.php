@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="../assets/css/themify-icons.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -52,10 +54,10 @@
                                 <a href="../admin/chuyenxe"> Chuyến xe</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../admin/chuyenxechay"> Chuyến xe chạy </a>
+                                <a href="../"> Chuyến xe chạy </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../admin/tuyenduong"> Tuyến đường </a>
+                                <a href="../"> Tuyến đường </a>
                             </li>
                         </ul>
                     </div>
@@ -73,7 +75,7 @@
         ?>
     </div>
     <!-- Footer Start-->
-    <footer class="bd-footer py-3 position-fixed start-0 end-0 bottom-0" style="background-color: #ffc0cb6e;">
+    <footer class="bd-footer py-3 position-relative bottom-0 start-0 end-0" style="background-color: #ffc0cb6e;">
         <div class="container py-2">
             <p class="text-center h4">
                 Thiết kế bởi <a href="https://github.com/Moobbot/BTL_CSE481_CNPM">Wibu</a>
@@ -94,6 +96,9 @@
     <script src="../assets/js/plugins.js"></script>
     <!-- //*Các hiệu ứng sự kiện phần thân -->
     <script src="../assets/js/main.js"></script>
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
 </body>
 
 </html>
