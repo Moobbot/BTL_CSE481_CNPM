@@ -40,22 +40,22 @@
                     <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
                         <ul class="navbar-nav text-start mx-auto">
                             <li class="nav-item active">
-                                <a href="./"> Trang chủ </a>
+                                <a href="./admin"> Trang chủ </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Nhà xe </a>
+                                <a href="./admin/nhaxe"> Nhà xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Xe </a>
+                                <a href="./admin/xe"> Xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Chuyến xe</a>
+                                <a href="./admin/chuyenxe"> Chuyến xe</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Chuyến xe chạy </a>
+                                <a href="./admin/chuyenxechay"> Chuyến xe chạy </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Tuyến đường </a>
+                                <a href="./admin/tuyenduong"> Tuyến đường </a>
                             </li>
                         </ul>
                     </div>

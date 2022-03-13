@@ -40,22 +40,22 @@
                     <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
                         <ul class="navbar-nav text-start mx-auto">
                             <li class="nav-item active">
-                                <a href="../"> Trang chủ </a>
+                                <a href="../admin"> Trang chủ </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../"> Nhà xe </a>
+                                <a href="../admin/nhaxe"> Nhà xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../"> Xe </a>
+                                <a href="../admin/xe"> Xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../"> Chuyến xe</a>
+                                <a href="../admin/chuyenxe"> Chuyến xe</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../"> Chuyến xe chạy </a>
+                                <a href="../admin/chuyenxechay"> Chuyến xe chạy </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../"> Tuyến đường </a>
+                                <a href="../admin/tuyenduong"> Tuyến đường </a>
                             </li>
                         </ul>
                     </div>
@@ -73,7 +73,7 @@
         ?>
     </div>
     <!-- Footer Start-->
-    <footer class="bd-footer py-3 position-fixed start-0 end-0" style="background-color: #ffc0cb6e;">
+    <footer class="bd-footer py-3 position-fixed start-0 end-0 bottom-0" style="background-color: #ffc0cb6e;">
         <div class="container py-2">
             <p class="text-center h4">
                 Thiết kế bởi <a href="https://github.com/Moobbot/BTL_CSE481_CNPM">Wibu</a>

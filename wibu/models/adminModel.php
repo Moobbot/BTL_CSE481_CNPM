@@ -26,6 +26,20 @@ class adminModel extends Database
         }
         return json_encode($result);
     }
+
+    public function GetChuyenxechay()
+    {
+        //connect DB
+        $nx = "SELECT * FROM `chuyenxechay`";
+        return mysqli_query($this->con, $nx);
+    }
+    
+    public function GetTuyenduong()
+    {
+        //connect DB
+        $nx = "SELECT * FROM `tuyenduong`";
+        return mysqli_query($this->con, $nx);
+    }
     // if (isset($_POST['btnSave'])) {
     //     // $ma = $_POST['ma_nhaxe'];
     //     $ten = $_POST['ten_nhaxe'];

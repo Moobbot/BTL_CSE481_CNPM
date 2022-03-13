@@ -1,35 +1,32 @@
 <div class="container-fluid custom-background" style="min-height: 85vh; height: auto; max-height: 200vh;">
     <div class="container pb-5">
-        <h3 class="pt-5 pb-4 fw-bold">Nhà Xe</h3>
+        <h3 class="pt-5 pb-4 fw-bold">Chuyến xe chạy</h3>
 
-        <button type="button" class="btn btn-primary btn-md " data-bs-toggle="modal" data-bs-target="#add_nhaxe">
-            <i class="fas fa-user-plus"></i> Thêm Nhà Xe
+        <button type="button" class="btn btn-primary btn-md " data-bs-toggle="modal" data-bs-target="#add_chuyenxechay">
+            <i class="fas fa-user-plus"></i> Thêm Chuyến xe chạy
         </button>
 
-        <div class="modal fade" id="add_nhaxe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="add_chuyenxechay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Thêm Nhà Xe</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Thêm Chuyến xe chạy</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form method="POST">
                         <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="subjectname" class="form-label">Tên Nhà Xe</label>
+                            <!-- <div class="mb-3">
+                                <label for="subjectname" class="form-label">Tên Chuyến xe chạy</label>
                                 <input type="text" class="form-control" name="ten_nhaxe">
-                            </div>
+                            </div> -->
+                            
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Số điện thoại</label>
+                                <label for="subjectname" class="form-label">Số ghế trống</label>
                                 <input type="text" class="form-control" name="sodt_nhaxe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Địa chỉ</label>
+                                <label for="subjectname" class="form-label">Trạng thái</label>
                                 <input type="text" class="form-control" name="dc_nhaxe">
-                            </div>
-                            <div class="mb-3">
-                                <label for="subjectname" class="form-label">Mô tả</label>
-                                <input type="text" class="form-control" name="mota_nhaxe">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -42,30 +39,27 @@
         </div>
 
         <!-- Model sửa -->
-        <div class="modal fade" id="edit_nhaxe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit_chuyenxechay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cập Nhật Thông Tin Nhà Xe</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Cập Nhật Thông Tin Chuyến xe chạy</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form method="POST">
                         <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="subjectname" class="form-label">Tên Nhà Xe</label>
+                            <!-- <div class="mb-3">
+                                <label for="subjectname" class="form-label">mã Chuyến xe chạy</label>
                                 <input type="text" class="form-control" name="ten_nhaxe">
-                            </div>
+                            </div> -->
+                            
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Số điện thoại</label>
+                                <label for="subjectname" class="form-label">Số ghế trống</label>
                                 <input type="text" class="form-control" name="sodt_nhaxe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Địa chỉ</label>
+                                <label for="subjectname" class="form-label">Trạng thái</label>
                                 <input type="text" class="form-control" name="dc_nhaxe">
-                            </div>
-                            <div class="mb-3">
-                                <label for="subjectname" class="form-label">Mô tả</label>
-                                <input type="text" class="form-control" name="mota_nhaxe">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -79,30 +73,27 @@
 
 
         <div class="container mt-4">
-            <table class="table table-hover table-striped " id="example">
+            <table class="table table-hover table-striped" id="example">
                 <thead>
                     <tr class="table-info">
-                        <th scope="col">Mã Nhà Xe</th>
-                        <th scope="col">Tên Nhà Xe</th>
-                        <th scope="col">Số điện thoại</th>
-                        <th scope="col">Địa chỉ</th>
-                        <th scope="col">Mô tả</th>
+                        <th scope="col">Mã Xe</th>
+                        <th scope="col">Mã chuyến Xe</th>
+                        <th scope="col">Số ghế</th>
+                        <th scope="col">Trạng thái</th>
                         <th scope="col">Chức năng</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-
-                    while ($row = mysqli_fetch_assoc($data["Nhaxe"])) {
+                    while ($row = mysqli_fetch_assoc($data["chuyenxechay"])) {
                     ?>
                         <tr>
-                            <th scope="row"><?php echo $row['ma_nhaxe']; ?> </th>
-                            <td><?php echo $row['ten_nhaxe']; ?></td>
-                            <td><?php echo $row['sdt_nhaxe']; ?></td>
-                            <td><?php echo $row['diachi_nhaxe']; ?></td>
-                            <td><?php echo $row['mota_nhaxe']; ?></td>
+                            <th scope="row"><?php echo $row['ma_xe']; ?> </th>
+                            <td><?php echo $row['ma_chuyenxe']; ?></td>
+                            <td><?php echo $row['soghetrong']; ?></td>
+                            <td><?php echo $row['trangthai']; ?></td>
                             <td>
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_nhaxe"><i class="fas fa-user-edit"></i></a>
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_chuyenxechay"><i class="fas fa-user-edit"></i></a>
                                 <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
                             </td>
                         </tr>
