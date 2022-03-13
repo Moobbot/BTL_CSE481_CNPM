@@ -73,7 +73,7 @@
         ?>
     </div>
     <!-- Footer Start-->
-    <footer class="bd-footer py-3 position-fixed start-0 end-0" style="background-color: #ffc0cb6e;">
+    <footer class="bd-footer py-3 position-fixed bottom-0 start-0 end-0" style="background-color: #ffc0cb6e;">
         <div class="container py-2">
             <p class="text-center h4">
                 Thiết kế bởi <a href="https://github.com/Moobbot/BTL_CSE481_CNPM">Wibu</a>

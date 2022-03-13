@@ -16,6 +16,21 @@ class adminModel extends Database
         return mysqli_query($this->con, $nx);
     }
 
+    public function GetChuyenXe()
+    {
+        //connect DB
+        $qr = "SELECT * FROM chuyenxe";
+        return mysqli_query($this->con, $qr);
+    }
+
+    public function InsertChuyenXe()
+    {
+        //connect DB
+        $nx = "SELECT * FROM ChuyenXe"; //Lệnh Insert
+        return mysqli_query($this->con, $nx);
+    }
+
+
     public function CheckTaikhoan($username, $pass)
     {
         //connect DB
