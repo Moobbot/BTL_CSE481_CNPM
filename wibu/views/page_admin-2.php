@@ -54,10 +54,10 @@
                                 <a href="../admin/chuyenxe"> Chuyến xe</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../"> Chuyến xe chạy </a>
+                                <a href="../admin/chuyenxechay"> Chuyến xe chạy </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../"> Tuyến đường </a>
+                                <a href="../admin/tuyenduong"> Tuyến đường </a>
                             </li>
                         </ul>
                     </div>
