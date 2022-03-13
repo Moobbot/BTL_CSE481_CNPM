@@ -23,4 +23,27 @@ class admin extends Controller
             ]
         );
     }
+
+    public function chuyenxe()
+    {
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin-2",
+            [
+                "Page" => "./admin_chuyenxeView",
+                "Nhaxe" => $admin->GetChuyenXe()
+            ]
+        );
+    }
+
+    public function xe()
+    {
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin-2",
+            [
+                "Page" => "./admin_xeView",
+            ]
+        );
+    }
 }

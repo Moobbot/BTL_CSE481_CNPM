@@ -1,35 +1,35 @@
 <div class="container-fluid custom-background" style="min-height: 85vh; height: auto; max-height: 200vh;">
     <div class="container pb-5">
-        <h3 class="pt-5 pb-4 fw-bold">Nhà Xe</h3>
+        <h3 class="pt-5 pb-4 fw-bold">Danh Sách Xe</h3>
 
-        <button type="button" class="btn btn-primary btn-md " data-bs-toggle="modal" data-bs-target="#add_nhaxe">
-            <i class="fas fa-user-plus"></i> Thêm Nhà Xe
+        <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#add_chuyenxe">
+            <i class="fas fa-user-plus"></i> Thêm Xe
         </button>
 
-        <div class="modal fade" id="add_nhaxe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="add_xe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Thêm Nhà Xe</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Thêm Xe</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form method="POST">
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Tên Nhà Xe</label>
-                                <input type="text" class="form-control" name="ten_nhaxe">
+                                <label for="subjectname" class="form-label">Mã Nhà Xe</label>
+                                <input type="text" class="form-control" name="ma_nhaxe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Số điện thoại</label>
-                                <input type="text" class="form-control" name="sodt_nhaxe">
+                                <label for="subjectname" class="form-label">Mã Xe</label>
+                                <input type="text" class="form-control" name="ma_xe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Địa chỉ</label>
-                                <input type="text" class="form-control" name="dc_nhaxe">
+                                <label for="subjectname" class="form-label">Biển Số</label>
+                                <input type="text" class="form-control" name="bienso_xe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Mô tả</label>
-                                <input type="text" class="form-control" name="mota_nhaxe">
+                                <label for="subjectname" class="form-label">Số Ghế Xe</label>
+                                <input type="text" class="form-control" name="soghe_xe">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -42,35 +42,35 @@
         </div>
 
         <!-- Model sửa -->
-        <div class="modal fade" id="edit_nhaxe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit_chuyenxe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cập Nhật Thông Tin Nhà Xe</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Cập Nhật Thông Tin Chuyến Xe</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form method="POST">
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Tên Nhà Xe</label>
-                                <input type="text" class="form-control" name="ten_nhaxe">
+                                <label for="subjectname" class="form-label">Mã Nhà Xe</label>
+                                <input type="text" class="form-control" name="ma_chuyenxe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Số điện thoại</label>
-                                <input type="text" class="form-control" name="sodt_nhaxe">
+                                <label for="subjectname" class="form-label">Mã Xe</label>
+                                <input type="text" class="form-control" name="matd_chuyenxe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Địa chỉ</label>
-                                <input type="text" class="form-control" name="dc_nhaxe">
+                                <label for="subjectname" class="form-label">Biển Số</label>
+                                <input type="text" class="form-control" name="tien_chuyenxe">
                             </div>
                             <div class="mb-3">
-                                <label for="subjectname" class="form-label">Mô tả</label>
-                                <input type="text" class="form-control" name="mota_nhaxe">
+                                <label for="subjectname" class="form-label">Số Ghế</label>
+                                <input type="text" class="form-control" name="gio_chuyenxe">
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                            <button type="submit" class="btn btn-primary" name="btnSave">Thêm</button>
+                            <button type="submit" class="btn btn-primary" name="btnSave">Sửa</button>
                         </div>
                     </form>
                 </div>
@@ -83,33 +83,25 @@
                 <thead>
                     <tr class="table-info">
                         <th scope="col">Mã Nhà Xe</th>
-                        <th scope="col">Tên Nhà Xe</th>
-                        <th scope="col">Số điện thoại</th>
-                        <th scope="col">Địa chỉ</th>
-                        <th scope="col">Mô tả</th>
+                        <th scope="col">Mã Xe</th>
+                        <th scope="col">Biển Số</th>
+                        <th scope="col">Số Ghế</th>
                         <th scope="col">Chức năng</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
 
-                    while ($row = mysqli_fetch_assoc($data["Nhaxe"])) {
-                    ?>
-                        <tr>
-                            <th scope="row"><?php echo $row['ma_nhaxe']; ?> </th>
-                            <td><?php echo $row['ten_nhaxe']; ?></td>
-                            <td><?php echo $row['sdt_nhaxe']; ?></td>
-                            <td><?php echo $row['diachi_nhaxe']; ?></td>
-                            <td><?php echo $row['mota_nhaxe']; ?></td>
-                            <td>
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_nhaxe"><i class="fas fa-user-edit"></i></a>
-                                <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
-                            </td>
-                        </tr>
-                    <?php
-                    }
+                    <tr>
+                        <th scope="row"> </th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_chuyenxe"><i class="fas fa-user-edit"></i></a>
+                            <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
+                        </td>
+                    </tr>
 
-                    ?>
 
                 </tbody>
             </table>
