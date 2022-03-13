@@ -28,12 +28,12 @@ class huyve extends Controller
             $cccd = $_POST["cccd"];
             $ma = $_POST["mave"];
             $email = $_POST["email"];
-        }
 
-        $kq = $this->vexeModel->HuyVe($ma);
-        if ($kq) {
-            echo "Bạn đã huỷ vé thành công";
-        } else echo "Xin lỗi, bạn không thể huỷ vé do quá thời gian quy định!";
+            $kq = $this->vexeModel->HuyVe($ma);
+            if ($kq) {
+                echo "Bạn đã huỷ vé thành công";
+            } else echo "Xin lỗi, bạn không thể huỷ vé do quá thời gian quy định!";
+        }
     }
 }
 

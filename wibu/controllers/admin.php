@@ -7,7 +7,7 @@ class admin extends Controller
         $this->view(
             "page_admin",
             [
-                "Page" => "admin/admin_trangchuView",
+                "Page" => "admin_trangchuView",
                 "Nhaxe" => $admin->GetNhaxe()
             ]
         );
@@ -16,10 +16,55 @@ class admin extends Controller
     {
         $admin = $this->model("adminModel");
         $this->view(
-            "page_admin",
+            "page_admin-2",
             [
-                "Page" => "admin/admin_nhaxeView",
+                "Page" => "./admin_nhaxeView",
                 "Nhaxe" => $admin->GetNhaxe()
+            ]
+        );
+    }
+
+    public function chuyenxe()
+    {
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin-2",
+            [
+                "Page" => "./admin_chuyenxeView",
+                "Nhaxe" => $admin->GetChuyenXe()
+            ]
+        );
+    }
+
+    public function xe()
+    {
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin-2",
+            [
+                "Page" => "./admin_xeView",
+            ]
+        );
+    }
+    public function chuyenxechay()
+    {
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin-2",
+            [
+                "Page" => "./admin_chuyenxechayView",
+                "chuyenxechay" => $admin->GetChuyenxechay()
+            ]
+        );
+    }
+    public function tuyenduong()
+    {
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin-2",
+            [
+                "Page" => "./admin_tuyenduongView",
+                "tuyenduong" => $admin->GetTuyenduong()
             ]
         );
     }

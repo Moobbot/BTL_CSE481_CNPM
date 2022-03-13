@@ -16,6 +16,21 @@ class adminModel extends Database
         return mysqli_query($this->con, $nx);
     }
 
+    public function GetChuyenXe()
+    {
+        //connect DB
+        $qr = "SELECT * FROM chuyenxe";
+        return mysqli_query($this->con, $qr);
+    }
+
+    public function InsertChuyenXe()
+    {
+        //connect DB
+        $nx = "SELECT * FROM ChuyenXe"; //Lệnh Insert
+        return mysqli_query($this->con, $nx);
+    }
+
+
     public function CheckTaikhoan($username, $pass)
     {
         //connect DB
@@ -25,6 +40,20 @@ class adminModel extends Database
             $result = true;
         }
         return json_encode($result);
+    }
+
+    public function GetChuyenxechay()
+    {
+        //connect DB
+        $nx = "SELECT * FROM `chuyenxechay`";
+        return mysqli_query($this->con, $nx);
+    }
+    
+    public function GetTuyenduong()
+    {
+        //connect DB
+        $nx = "SELECT * FROM `tuyenduong`";
+        return mysqli_query($this->con, $nx);
     }
     // if (isset($_POST['btnSave'])) {
     //     // $ma = $_POST['ma_nhaxe'];
