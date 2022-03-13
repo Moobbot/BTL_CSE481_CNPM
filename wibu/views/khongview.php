@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
 
     <!-- CSS here -->
     <!-- bootstrap5 -->
@@ -57,25 +57,22 @@
                     <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
                         <ul class="navbar-nav text-start mx-auto">
                             <li class="nav-item active">
-                                <a href="./../../" class="active"> Trang chủ </a>
+                                <a href="../../"> Trang chủ </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#"> Vé xe liên tỉnh </a>
+                                <a href="../../nhaxe_danhsach"> Nhà xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./../../nhaxe_danhsach"> Nhà xe </a>
+                                <a href="../../lichtrinh"> Lịch trình </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#"> Lịch trình </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./../../lienhe"> Liên hệ </a>
+                                <a href="../../lienhe"> Liên hệ </a>
                             </li>
                         </ul>
                     </div>
-                    <!-- <div class="header-right">
-                    <a href="#" class="header-btn2">Đặt ngay!</a>
-                </div> -->
+                    <div class="header-right" style="width: 150px;">
+                        <!-- <a href="#" class="header-btn2">Đặt ngay!</a> -->
+                    </div>
                 </nav>
             </div>
         </div>

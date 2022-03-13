@@ -52,7 +52,7 @@
                     <a href="../../" type="submit" name="btnhuy" class="btn button boxed-btn me-2">Quay lại</a>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn button boxed-btn" name="huy">Huỷ vé</button>
+                    <a href="../../" type="submit" name="btnhuy" class="btn btn-danger px-4">Huỷ vé</a>
                 </div>
             </div>
 

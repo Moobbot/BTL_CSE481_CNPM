@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2022 at 01:42 PM
+-- Generation Time: Mar 09, 2022 at 07:16 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -120,7 +120,7 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`ten_taikhoan`, `matkhau`) VALUES
-('admin', '21232f297a57a5a743894a0e4a801fc3');
+('admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -172,9 +172,7 @@ INSERT INTO `vexe` (`ma_ve`, `ma_chuyenxe`, `diemdon_khach`, `gia_ve`, `hoten_kh
 (2, 4, 'Hà Nam', 24, 'Nguyễn Đức Kiên', '0800001490', 'kien@gmail.com', 125900014),
 (3, 3, 'Hà Nội', 40, 'Nguyễn Văn Phú', '0945000199', 'phu@gmail.com', 120000000),
 (4, 2, 'Nguyễn Văn Long', 35, 'Ngô Đức Tâm', '0800001412', 'Tam@gmail.com', 125634823),
-(5, 5, 'Bắc Ninh', 35, 'Phạm Quang Dương', '0945120156', 'duong.gmail.com', 120000011),
-(6, 1, 'dsa', 0, 'helo', 'sad', 'sad', 0),
-(7, 1, 'KTX Đại Học Thủy Lợi', 0, 'fdsaf', '+8476636672', 'ngotam24082001@gmail.com', 452854);
+(5, 5, 'Bắc Ninh', 35, 'Phạm Quang Dương', '0945120156', 'duong.gmail.com', 120000011);
 
 -- --------------------------------------------------------
 
@@ -183,7 +181,8 @@ INSERT INTO `vexe` (`ma_ve`, `ma_chuyenxe`, `diemdon_khach`, `gia_ve`, `hoten_kh
 -- (See below for the actual view)
 --
 CREATE TABLE `vw_chuyenxechay` (
-`ten_nhaxe` varchar(30)
+`ma_chuyenxe` int(11) unsigned
+,`ten_nhaxe` varchar(30)
 ,`soghetrong` int(11) unsigned
 ,`giodi_chuyenxe` time
 ,`diemdi_tuyenduong` text
@@ -227,7 +226,7 @@ INSERT INTO `xe` (`ma_xe`, `ma_nhaxe`, `bienso_xe`, `soghe_xe`) VALUES
 --
 DROP TABLE IF EXISTS `vw_chuyenxechay`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_chuyenxechay`  AS SELECT `nhaxe`.`ten_nhaxe` AS `ten_nhaxe`, `chuyenxechay`.`soghetrong` AS `soghetrong`, `chuyenxe`.`giodi_chuyenxe` AS `giodi_chuyenxe`, `tuyenduong`.`diemdi_tuyenduong` AS `diemdi_tuyenduong`, `tuyenduong`.`diemden_tuyenduong` AS `diemden_tuyenduong`, `chuyenxe`.`giatien_chuyenxe` AS `giatien_chuyenxe` FROM ((((`chuyenxechay` join `xe` on(`chuyenxechay`.`ma_xe` = `xe`.`ma_xe`)) join `nhaxe` on(`xe`.`ma_nhaxe` = `nhaxe`.`ma_nhaxe`)) join `chuyenxe` on(`chuyenxechay`.`ma_chuyenxe` = `chuyenxe`.`ma_chuyenxe`)) join `tuyenduong` on(`chuyenxe`.`ma_tuyenduong` = `tuyenduong`.`ma_tuyenduong`)) WHERE `chuyenxechay`.`trangthai` like 0 AND `chuyenxechay`.`soghetrong` > 0 ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_chuyenxechay`  AS SELECT `chuyenxe`.`ma_chuyenxe` AS `ma_chuyenxe`, `nhaxe`.`ten_nhaxe` AS `ten_nhaxe`, `chuyenxechay`.`soghetrong` AS `soghetrong`, `chuyenxe`.`giodi_chuyenxe` AS `giodi_chuyenxe`, `tuyenduong`.`diemdi_tuyenduong` AS `diemdi_tuyenduong`, `tuyenduong`.`diemden_tuyenduong` AS `diemden_tuyenduong`, `chuyenxe`.`giatien_chuyenxe` AS `giatien_chuyenxe` FROM ((((`chuyenxechay` join `xe` on(`chuyenxechay`.`ma_xe` = `xe`.`ma_xe`)) join `nhaxe` on(`xe`.`ma_nhaxe` = `nhaxe`.`ma_nhaxe`)) join `chuyenxe` on(`chuyenxechay`.`ma_chuyenxe` = `chuyenxe`.`ma_chuyenxe`)) join `tuyenduong` on(`chuyenxe`.`ma_tuyenduong` = `tuyenduong`.`ma_tuyenduong`)) WHERE `chuyenxechay`.`trangthai` like 0 AND `chuyenxechay`.`soghetrong` > 0 ;
 
 --
 -- Indexes for dumped tables
@@ -299,7 +298,7 @@ ALTER TABLE `tuyenduong`
 -- AUTO_INCREMENT for table `vexe`
 --
 ALTER TABLE `vexe`
-  MODIFY `ma_ve` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ma_ve` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `xe`
