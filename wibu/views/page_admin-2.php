@@ -12,10 +12,10 @@
 
     <!-- CSS here -->
     <!-- bootstrap5 -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="./assets/css/themify-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                     <div class="header-left">
                         <!-- Logo -->
                         <a href="#" class="navbar-brand logo">
-                            <img class="d-inline-block align-center img-fluid" src="./assets/img/logo/logo.png" alt="logo Wibu">
+                            <img class="d-inline-block align-center img-fluid" src="../assets/img/logo/logo.png" alt="logo Wibu">
                             <span class="hidden">Wibu</span>
                         </a>
                     </div>
@@ -40,22 +40,22 @@
                     <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
                         <ul class="navbar-nav text-start mx-auto">
                             <li class="nav-item active">
-                                <a href="./"> Trang chủ </a>
+                                <a href="../"> Trang chủ </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Nhà xe </a>
+                                <a href="../"> Nhà xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Xe </a>
+                                <a href="../"> Xe </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Chuyến xe</a>
+                                <a href="../"> Chuyến xe</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Chuyến xe chạy </a>
+                                <a href="../"> Chuyến xe chạy </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./"> Tuyến đường </a>
+                                <a href="../"> Tuyến đường </a>
                             </li>
                         </ul>
                     </div>
@@ -82,18 +82,18 @@
     </footer>
     <!-- Footer End-->
     <!-- JS here -->
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap-->
-    <script src="./assets/js/vendor/jquery-3.6.0.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/vendor/jquery-3.6.0.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
 
     <!-- Jquery Plugins, main Jquery -->
     <!-- //*Tránh các lỗi về giao diện điều khiển trong các trình duyệt thiếu bảng điều khiển. -->
-    <script src="./assets/js/plugins.js"></script>
+    <script src="../assets/js/plugins.js"></script>
     <!-- //*Các hiệu ứng sự kiện phần thân -->
-    <script src="./assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
