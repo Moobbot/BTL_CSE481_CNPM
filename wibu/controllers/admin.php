@@ -36,6 +36,23 @@ class admin extends Controller
                 <?php
             }
         }
+        if(isset($_POST['btnDelete'])){
+            $id_nhaxe = $_POST['deleteNhaxeID'];
+            $deleteNhaxe = $this->model("adminModel");
+            if($deleteNhaxe->DeleteNhaxe($id_nhaxe)){
+                ?>
+                    <script>
+                        alert("Xóa thành công");
+                    </script>
+                    <?php
+            }else{
+                ?>
+                    <script>
+                        alert("Xóa thất bại");
+                    </script>
+                <?php
+            }
+        }
         $admin = $this->model("adminModel");
         $this->view(
             "page_admin-2",
