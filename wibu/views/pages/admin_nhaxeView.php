@@ -49,28 +49,29 @@
                         <h5 class="modal-title" id="exampleModalLabel">Cập Nhật Thông Tin Nhà Xe</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form method="POST">
+                    <form method="POST" action = "nhaxe">
                         <div class="modal-body">
+                        <input type="hidden" class="form-control" name="id_nhaxe" id="edit_manhaxe_id">
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Tên Nhà Xe</label>
-                                <input type="text" class="form-control" name="ten_nhaxe">
+                                <input type="text" class="form-control" name="ten_nhaxe" id="edit_tennhaxe_id">
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Số điện thoại</label>
-                                <input type="text" class="form-control" name="sodt_nhaxe">
+                                <input type="text" class="form-control" name="sodt_nhaxe" id="edit_sodienthoai_id">
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Địa chỉ</label>
-                                <input type="text" class="form-control" name="dc_nhaxe">
+                                <input type="text" class="form-control" name="dc_nhaxe" id="edit_diachi_id">
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Mô tả</label>
-                                <input type="text" class="form-control" name="mota_nhaxe">
+                                <input type="text" class="form-control" name="mota_nhaxe" id="edit_mota_id">
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                            <button type="submit" class="btn btn-primary" name="btnSave">Thêm</button>
+                            <button type="submit" class="btn btn-primary" name="btnSave">Sửa</button>
                         </div>
                     </form>
                 </div>
@@ -95,17 +96,20 @@
 
                     while ($row = mysqli_fetch_assoc($data["Nhaxe"])) {
                     ?>
-                        <tr>
-                            <th scope="row"><?php echo $row['ma_nhaxe']; ?> </th>
-                            <td><?php echo $row['ten_nhaxe']; ?></td>
-                            <td><?php echo $row['sdt_nhaxe']; ?></td>
-                            <td><?php echo $row['diachi_nhaxe']; ?></td>
-                            <td><?php echo $row['mota_nhaxe']; ?></td>
-                            <td>
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_nhaxe"><i class="fas fa-user-edit"></i></a>
-                                <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <th scope="row"><?php echo $row['ma_nhaxe']; ?> </th>
+                        <td><?php echo $row['ten_nhaxe']; ?></td>
+                        <td><?php echo $row['sdt_nhaxe']; ?></td>
+                        <td><?php echo $row['diachi_nhaxe']; ?></td>
+                        <td><?php echo $row['mota_nhaxe']; ?></td>
+                        <td>
+                            <a class="btn btn-warning editClass" data-bs-toggle="modal" data-bs-target="#edit_nhaxe"
+                                name='<?php echo $row['ma_nhaxe'] . ',' . $row['ten_nhaxe'] . ',' . $row['sdt_nhaxe'] . ',' . $row['diachi_nhaxe'] . ',' . $row['mota_nhaxe'];  ?>'><i
+                                    class="fas fa-user-edit"></i></a>
+                            <a class="btn btn-danger" name='<?php echo $row['ma_nhaxe'];?>'><i
+                                    class="fas fa-user-slash"></i></a>
+                        </td>
+                    </tr>
                     <?php
                     }
 
@@ -113,13 +117,29 @@
 
                 </tbody>
             </table>
-
         </div>
     </div>
 
 </div>
 
 <script>
+    // bắt class edit, lấy name, tách name, gán dữ liệu
+$(document).ready(function() {
+    $('.editClass').click(function() {
+        $id = $(this).attr('name');
+        $ma_nhaxe = $id.split(",")[0];
+        $ten_nhaxe = $id.split(",")[1];
+        $sdt_nhaxe = $id.split(",")[2];
+        $diachi_nhaxe = $id.split(",")[3];
+        $mota_nhaxe = $id.split(",")[4];
+
+        $('#edit_manhaxe_id').val($ma_nhaxe);
+        $('#edit_tennhaxe_id').val($ten_nhaxe);
+        $('#edit_sodienthoai_id').val($sdt_nhaxe);
+        $('#edit_diachi_id').val($diachi_nhaxe);
+        $('#edit_mota_id').val($mota_nhaxe);
+    });
+
     $('#example').DataTable({
         language: {
             processing: "Message khi đang tải dữ liệu",
@@ -143,4 +163,5 @@
             }
         },
     });
+})
 </script>

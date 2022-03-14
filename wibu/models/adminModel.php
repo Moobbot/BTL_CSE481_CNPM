@@ -8,7 +8,17 @@ class adminModel extends Database
         $nx = "SELECT * FROM nhaxe";
         return mysqli_query($this->con, $nx);
     }
-
+    // sửa nhà xe
+    public function SetNhaxe($id_nhaxe, $ten_nhaxe, $sodt_nhaxe, $dc_nhaxe, $mota_nhaxe){
+        $sql = "UPDATE `nhaxe` SET`ten_nhaxe`='$ten_nhaxe',`sdt_nhaxe`='$sodt_nhaxe',`diachi_nhaxe`='$dc_nhaxe',`mota_nhaxe`='$mota_nhaxe' WHERE  `ma_nhaxe`='$id_nhaxe'";
+        $result = mysqli_query($this->con, $sql);
+        if($result > 0 ){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public function InsertNhaxe()
     {
         //connect DB
