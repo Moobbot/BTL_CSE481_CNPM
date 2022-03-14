@@ -65,15 +65,6 @@ class admin extends Controller
 
     public function chuyenxe()
     {
-        $admin = $this->model("adminModel");
-        $this->view(
-            "page_admin-2",
-            [
-                "Page" => "./admin_chuyenxeView",
-                "Nhaxe" => $admin->GetChuyenXe()
-            ]
-        );
-
         // thêm code bắt sự kiện post
         if(isset($_POST['btnSave'])){
             $ma_chuyenxe = $_POST['ma_chuyenxe'];
@@ -112,6 +103,15 @@ class admin extends Controller
                 <?php
             }
         }
+        $admin = $this->model("adminModel");
+        $this->view(
+            "page_admin-2",
+            [
+                "Page" => "./admin_chuyenxeView",
+                "Nhaxe" => $admin->GetChuyenXe()
+            ]
+        );
+
     }
 
     public function xe()
