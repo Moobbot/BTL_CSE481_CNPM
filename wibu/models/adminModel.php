@@ -19,6 +19,28 @@ class adminModel extends Database
             return false;
         }
     }
+
+    public function DeleteNhaxe($id_nhaxe){
+        // Xóa xe liên quan đến nhà xe trong chuyến xe chạy
+        $sql1 ="DELETE FROM chuyenxechay where ma_xe IN (SELECT ma_xe FROM xe WHERE ma_nhaxe = '$id_nhaxe')";
+        $result1 = mysqli_query($this->con, $sql1);
+
+        //  Xóa xe liên quan đến nhà xe trong bảng xe
+        $sql2 = "DELETE FROM xe where ma_nhaxe = '$id_nhaxe'";
+        $result2 = mysqli_query($this->con, $sql2);
+
+        // Xóa nhà xe
+        $sql3 = "DELETE FROM nhaxe where ma_nhaxe = '$id_nhaxe'";
+        $result3 = mysqli_query($this->con, $sql3);
+
+        if($result3 > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
     public function InsertNhaxe()
     {
         //connect DB
