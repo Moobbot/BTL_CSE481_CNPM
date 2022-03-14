@@ -54,6 +54,40 @@ class adminModel extends Database
         $qr = "SELECT * FROM chuyenxe";
         return mysqli_query($this->con, $qr);
     }
+// sửa chuyến xe
+    public function SetChuyenXe($ma_chuyenxe, $matd_chuyenxe, $tien_chuyenxe, $gio_chuyenxe)
+    {
+        //connect DB
+        $sql = "UPDATE `chuyenxe` SET `ma_tuyenduong`='$matd_chuyenxe',`giatien_chuyenxe`='$tien_chuyenxe',`giodi_chuyenxe`='$gio_chuyenxe' WHERE `ma_chuyenxe`='$matd_chuyenxe'";
+        $result = mysqli_query($this->con, $sql);
+        if($result > 0 ){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+//Xóa chuyến xe
+    public function DeleteChuyenXe($id_chuyenxe)
+    {
+        //connect DB
+        // xóa vé xe
+        $sql1 = "DELETE FROM `vexe` WHERE ma_chuyenxe = '$id_chuyenxe'";
+        $result1 = mysqli_query($this->con, $sql1);
+        // xóa chuyến xe chạy
+        $sql2 = "DELETE FROM `chuyenxechay` WHERE ma_chuyenxe = '$id_chuyenxe'";
+        $result2 = mysqli_query($this->con, $sql2);
+        // xóa chuyến xe
+        $sql3 = "DELETE FROM `chuyenxe` WHERE ma_chuyenxe = '$id_chuyenxe'";
+        $result3 = mysqli_query($this->con, $sql3);
+        if($result3 > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 
     public function InsertChuyenXe()
     {
