@@ -73,6 +73,45 @@ class admin extends Controller
                 "Nhaxe" => $admin->GetChuyenXe()
             ]
         );
+
+        // thêm code bắt sự kiện post
+        if(isset($_POST['btnSave'])){
+            $ma_chuyenxe = $_POST['ma_chuyenxe'];
+            $matd_chuyenxe = $_POST['matd_chuyenxe'];
+            $tien_chuyenxe = $_POST['tien_chuyenxe'];
+            $gio_chuyenxe = $_POST['gio_chuyenxe'];
+            $editchuyenxe = $this->model("adminModel");
+            if($editchuyenxe->SetChuyenxe($ma_chuyenxe, $matd_chuyenxe, $tien_chuyenxe, $gio_chuyenxe)){
+                ?>
+                    <script>
+                        alert("Sửa thành công");
+                    </script>
+                <?php
+            }else{
+                ?>
+                    <script>
+                        alert("Sửa thất bại");
+                    </script>
+                <?php
+            }
+        }
+        if(isset($_POST['btnDelete'])){
+            $id_chuyenxe = $_POST['deleteChuyenxeID'];
+            $deletechuyenxe = $this->model("adminModel");
+            if($deletechuyenxe->DeleteChuyenxe($id_chuyenxe)){
+                ?>
+                    <script>
+                        alert("Xóa thành công");
+                    </script>
+                    <?php
+            }else{
+                ?>
+                    <script>
+                        alert("Xóa thất bại");
+                    </script>
+                <?php
+            }
+        }
     }
 
     public function xe()
