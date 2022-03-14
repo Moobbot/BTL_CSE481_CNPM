@@ -18,6 +18,16 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- thêm link jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -32,11 +42,14 @@
                     <div class="header-left">
                         <!-- Logo -->
                         <a href="#" class="navbar-brand logo">
-                            <img class="d-inline-block align-center img-fluid" src="../assets/img/logo/logo.png" alt="logo Wibu">
+                            <img class="d-inline-block align-center img-fluid" src="../assets/img/logo/logo.png"
+                                alt="logo Wibu">
                             <span class="hidden">Wibu</span>
                         </a>
                     </div>
-                    <button type="button" class="btn-menu-mobile navbar-toggler" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <button type="button" class="btn-menu-mobile navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
