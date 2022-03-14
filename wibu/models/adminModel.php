@@ -88,9 +88,17 @@ class adminModel extends Database
         }
     }
 
-
-    public function InsertChuyenXe()
+    // Thêm chuyến
+    public function InsertChuyenXe($ma_chuyenxe, $matd_chuyenxe, $tien_chuyenxe, $gio_chuyenxe)
     {
+        $sql = "INSERT INTO `chuyenxe`(`ma_chuyenxe`, `ma_tuyenduong`, `giatien_chuyenxe`, `giodi_chuyenxe`) VALUES ('$ma_chuyenxe','$matd_chuyenxe','$tien_chuyenxe','$gio_chuyenxe')";
+        $result = mysqli_query($this->con, $sql);
+        if($result > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
         //connect DB
         $nx = "SELECT * FROM ChuyenXe"; //Lệnh Insert
         return mysqli_query($this->con, $nx);

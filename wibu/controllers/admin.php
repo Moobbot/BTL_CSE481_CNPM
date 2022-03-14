@@ -103,6 +103,27 @@ class admin extends Controller
                 <?php
             }
         }
+
+        if(isset($_POST['btnAdd'])){
+            $ma_chuyenxe = $_POST['ma_chuyenxe'];
+            $matd_chuyenxe = $_POST['matd_chuyenxe'];
+            $tien_chuyenxe = $_POST['tien_chuyenxe'];
+            $gio_chuyenxe = $_POST['gio_chuyenxe'];
+            $add_chuyenxe = $this->model("adminModel");
+            if($add_chuyenxe->InsertChuyenXe($ma_chuyenxe, $matd_chuyenxe, $tien_chuyenxe, $gio_chuyenxe)){
+                ?>
+                    <script>
+                        alert("Thêm thành công");
+                    </script>
+                <?php
+            }else{
+                ?>
+                    <script>
+                        alert("Thêm thất bại");
+                    </script>
+                <?php
+        }
+        }
         $admin = $this->model("adminModel");
         $this->view(
             "page_admin-2",

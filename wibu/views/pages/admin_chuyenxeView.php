@@ -13,7 +13,7 @@
                         <h5 class="modal-title" id="exampleModalLabel">Thêm Chuyến Xe</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form method="POST">
+                    <form method="POST" action="chuyenxe">
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Mã Chuyến Xe</label>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                            <button type="submit" class="btn btn-primary" name="btnSave">Thêm</button>
+                            <button type="submit" class="btn btn-primary" name="btnAdd">Thêm</button>
                         </div>
                     </form>
                 </div>
