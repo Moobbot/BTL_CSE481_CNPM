@@ -6,7 +6,8 @@
             <i class="fas fa-user-plus"></i> Thêm tuyến đường
         </button>
 
-        <div class="modal fade" id="add_chuyenxechay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="add_chuyenxechay" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -30,7 +31,8 @@
                             <div class="mb-3">
                                 <!-- <label for="subjectname" class="form-label">Trạng thái</label>
                                 <input type="text" class="form-control" name="dc_nhaxe"> -->
-                                <input type="button" value="Hình ảnh" onclick="document.getElementById('file').click()" />
+                                <input type="button" value="Hình ảnh"
+                                    onclick="document.getElementById('file').click()" />
                                 <input type="file" id="file" style="display:none" />
                             </div>
                         </div>
@@ -44,7 +46,8 @@
         </div>
 
         <!-- Model sửa -->
-        <div class="modal fade" id="edit_chuyenxechay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit_chuyenxechay" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -65,7 +68,8 @@
                             <div class="mb-3">
                                 <!-- <label for="subjectname" class="form-label">Trạng thái</label>
                                 <input type="text" class="form-control" name="dc_nhaxe"> -->
-                                <input type="button" value="Hình ảnh" onclick="document.getElementById('file').click()" />
+                                <input type="button" value="Hình ảnh"
+                                    onclick="document.getElementById('file').click()" />
                                 <input type="file" id="file" style="display:none" />
                             </div>
                         </div>
@@ -94,16 +98,19 @@
                     <?php
                     while ($row = mysqli_fetch_assoc($data["tuyenduong"])) {
                     ?>
-                        <tr>
-                            <th><?php echo $row['ma_tuyenduong']; ?> </th>
-                            <td><?php echo $row['diemdi_tuyenduong']; ?></td>
-                            <td><?php echo $row['diemden_tuyenduong']; ?></td>
-                            <td><img src="<?php echo $row['hinhanh_tuyenduong']; ?>" alt="" id="imgmap" style="height:80px"></td>
-                            <td>
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_chuyenxechay"><i class="fas fa-user-edit"></i></a>
-                                <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <th scope="row"><?php echo $row['ma_tuyenduong']; ?> </th>
+                        <td><?php echo $row['diemdi_tuyenduong']; ?></td>
+                        <td><?php echo $row['diemden_tuyenduong']; ?></td>
+                        <td><img src="<?php echo $row['hinhanh_tuyenduong']; ?>" alt="" id="imgmap" style="height:80px">
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit_chuyenxechay"><i
+                                    class="fas fa-user-edit"></i></a>
+                            <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
+                        </td>
+                    </tr>
+
                     <?php
                     }
 
@@ -118,27 +125,27 @@
 </div>
 
 <script>
-    $('#example').DataTable({
-        language: {
-            processing: "Message khi đang tải dữ liệu",
-            search: "Tìm kiếm: ",
-            lengthMenu: "Điều chỉnh số lượng bản ghi trên 1 trang MENU ",
-            info: "Bản ghi từ START đến END Tổng công TOTAL bản ghi",
-            infoEmpty: "Khi không có dữ liệu, Hiển thị 0 bản ghi trong 0 tổng cộng 0 ",
-            infoFiltered: "(Message bổ sung cho info khi không search đc record nào MAX)",
-            loadingRecords: "",
-            zeroRecords: "Không tìm thấy kết quả",
-            emptyTable: "Không có dữ liệu",
-            paginate: {
-                first: "Trang đầu",
-                previous: "Trang trước",
-                next: "Trang sau",
-                last: "Trang cuối"
-            },
-            aria: {
-                sortAscending: ": Message khi đang sắp xếp theo column",
-                sortDescending: ": Message khi đang sắp xếp theo column",
-            }
+$('#example').DataTable({
+    language: {
+        processing: "Message khi đang tải dữ liệu",
+        search: "Tìm kiếm: ",
+        lengthMenu: "Điều chỉnh số lượng bản ghi trên 1 trang MENU ",
+        info: "Bản ghi từ START đến END Tổng công TOTAL bản ghi",
+        infoEmpty: "Khi không có dữ liệu, Hiển thị 0 bản ghi trong 0 tổng cộng 0 ",
+        infoFiltered: "(Message bổ sung cho info khi không search đc record nào MAX)",
+        loadingRecords: "",
+        zeroRecords: "Không tìm thấy kết quả",
+        emptyTable: "Không có dữ liệu",
+        paginate: {
+            first: "Trang đầu",
+            previous: "Trang trước",
+            next: "Trang sau",
+            last: "Trang cuối"
         },
-    });
+        aria: {
+            sortAscending: ": Message khi đang sắp xếp theo column",
+            sortDescending: ": Message khi đang sắp xếp theo column",
+        }
+    },
+});
 </script>

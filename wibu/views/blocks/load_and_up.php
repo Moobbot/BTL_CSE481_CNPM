@@ -7,7 +7,7 @@
             <div class="preloader-circle"></div>
             <!-- img -->
             <div class="preloader-img">
-                <img src="assets/img/logo/logo.png" alt="Zala">
+                <img src="assets/img/logo/logo.png" alt="Wibu">
                 <!-- class="img-fluid"> -->
             </div>
         </div>
