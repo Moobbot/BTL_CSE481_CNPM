@@ -110,6 +110,7 @@
                             <a class="btn btn-danger"><i class="fas fa-user-slash"></i></a>
                         </td>
                     </tr>
+
                     <?php
                     }
 
@@ -146,23 +147,5 @@ $('#example').DataTable({
             sortDescending: ": Message khi đang sắp xếp theo column",
         }
     },
-});
-</script>
-<script>
-$(document).ready(function() {
-    $('#imgmap').width(200);
-    $('#imgmap').mouseover(function() {
-        $(this).css("cursor", "pointer");
-    });
-    $("#imgmap").toggle(function() {
-            $(this).animate({
-                width: "500px"
-            }, 'slow');
-        },
-        function() {
-            $(this).animate({
-                width: "200px"
-            }, 'slow');
-        });
 });
 </script>

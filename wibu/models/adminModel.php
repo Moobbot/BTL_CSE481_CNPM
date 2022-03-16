@@ -41,11 +41,22 @@ class adminModel extends Database
         }
     }
     
-    public function InsertNhaxe()
+    public function InsertNhaxe($ten_nhaxe, $sodt_nhaxe, $dc_nhaxe, $mota_nhaxe)
     {
-        //connect DB
-        $nx = "SELECT * FROM nhaxe"; //Lệnh Insert
-        return mysqli_query($this->con, $nx);
+        if($ten_nhaxe != '' && $sodt_nhaxe != '' &&  $dc_nhaxe != '' &&  $mota_nhaxe != ''){
+
+            $sql = "INSERT INTO `nhaxe`(`ten_nhaxe`, `sdt_nhaxe`, `diachi_nhaxe`, `mota_nhaxe`) VALUES ('$ten_nhaxe', '$sodt_nhaxe', '$dc_nhaxe', '$mota_nhaxe')";
+            $result = mysqli_query($this->con, $sql);
+            if($result > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+            //connect DB
+            $nx = "SELECT * FROM ChuyenXe"; //Lệnh Insert
+            return mysqli_query($this->con, $nx);
+        }
     }
 
     public function GetChuyenXe()

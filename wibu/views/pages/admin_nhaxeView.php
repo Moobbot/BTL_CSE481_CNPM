@@ -34,7 +34,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                            <button type="submit" class="btn btn-primary" name="btnSave">Thêm</button>
+                            <button type="submit" class="btn btn-primary" name="btnAdd">Thêm</button>
                         </div>
                     </form>
                 </div>
