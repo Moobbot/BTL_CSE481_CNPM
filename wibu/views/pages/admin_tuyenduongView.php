@@ -95,7 +95,7 @@
                     while ($row = mysqli_fetch_assoc($data["tuyenduong"])) {
                     ?>
                         <tr>
-                            <th scope="row"><?php echo $row['ma_tuyenduong']; ?> </th>
+                            <th><?php echo $row['ma_tuyenduong']; ?> </th>
                             <td><?php echo $row['diemdi_tuyenduong']; ?></td>
                             <td><?php echo $row['diemden_tuyenduong']; ?></td>
                             <td><img src="<?php echo $row['hinhanh_tuyenduong']; ?>" alt="" id="imgmap" style="height:80px"></td>
@@ -140,23 +140,5 @@
                 sortDescending: ": Message khi đang sắp xếp theo column",
             }
         },
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $('#imgmap').width(200);
-        $('#imgmap').mouseover(function() {
-            $(this).css("cursor", "pointer");
-        });
-        $("#imgmap").toggle(function() {
-                $(this).animate({
-                    width: "500px"
-                }, 'slow');
-            },
-            function() {
-                $(this).animate({
-                    width: "200px"
-                }, 'slow');
-            });
     });
 </script>

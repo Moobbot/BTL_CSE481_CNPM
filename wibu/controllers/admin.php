@@ -14,6 +14,27 @@ class admin extends Controller
     }
     public function nhaxe()
     {
+        if(isset($_POST['btnAdd'])){
+            // $id_nhaxe = $_POST['id_nhaxe'];
+            $ten_nhaxe = $_POST['ten_nhaxe'];
+            $sodt_nhaxe = $_POST['sodt_nhaxe'];
+            $dc_nhaxe = $_POST['dc_nhaxe'];
+            $mota_nhaxe = $_POST['mota_nhaxe'];
+            $editnhaxe = $this->model("adminModel");
+            if($editnhaxe->InsertNhaxe( $ten_nhaxe, $sodt_nhaxe, $dc_nhaxe, $mota_nhaxe)){
+                ?>
+                    <script>
+                        alert("Thêm thành công");
+                    </script>
+                <?php
+            }else{
+                ?>
+                    <script>
+                        alert("Thêm thất bại");
+                    </script>
+                <?php
+            }
+        }
         // thêm code bắt sự kiện post
         if(isset($_POST['btnSave'])){
             $id_nhaxe = $_POST['id_nhaxe'];
