@@ -19,9 +19,22 @@
 </head>
 
 <body>
-    <?php
-    require_once('wibu/views/blocks/load_and_up.php');
-    ?>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <!-- Bên trong load trang gồm: -->
+            <div class="preloader-inner position-relative">
+                <!-- Vòng quay xung quanh img -->
+                <div class="preloader-circle"></div>
+                <!-- img -->
+                <div class="preloader-img">
+                    <img src="./assets/img/logo/logo.png" alt="Wibu">
+                    <!-- class="img-fluid"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
         <div class="header-area" id="header">
@@ -30,11 +43,14 @@
                     <div class="header-left">
                         <!-- Logo -->
                         <a href="#" class="navbar-brand logo">
-                            <img class="d-inline-block align-center img-fluid" src="./assets/img/logo/logo.png" alt="logo Wibu">
+                            <img class="d-inline-block align-center img-fluid" src="./assets/img/logo/logo.png"
+                                alt="logo Wibu">
                             <span class="hidden">Wibu</span>
                         </a>
                     </div>
-                    <button type="button" class="btn-menu-mobile navbar-toggler" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <button type="button" class="btn-menu-mobile navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="main-menu collapse navbar-collapse" id="toggleMobileMenu">
