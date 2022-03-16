@@ -17,19 +17,19 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Mã Nhà Xe</label>
-                                <input type="text" class="form-control" name="ma_nhaxe">
+                                <input type="text" class="form-control" name="ma_nhaxe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Mã Xe</label>
-                                <input type="text" class="form-control" name="ma_xe">
+                                <input type="text" class="form-control" name="ma_xe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Biển Số</label>
-                                <input type="text" class="form-control" name="bienso_xe">
+                                <input type="text" class="form-control" name="bienso_xe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Số Ghế Xe</label>
-                                <input type="text" class="form-control" name="soghe_xe">
+                                <input type="text" class="form-control" name="soghe_xe" required>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -53,19 +53,19 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Mã Nhà Xe</label>
-                                <input type="text" class="form-control" name="ma_chuyenxe">
+                                <input type="text" class="form-control" name="ma_chuyenxe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Mã Xe</label>
-                                <input type="text" class="form-control" name="matd_chuyenxe">
+                                <input type="text" class="form-control" name="matd_chuyenxe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Biển Số</label>
-                                <input type="text" class="form-control" name="tien_chuyenxe">
+                                <input type="text" class="form-control" name="tien_chuyenxe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Số Ghế</label>
-                                <input type="text" class="form-control" name="gio_chuyenxe">
+                                <input type="text" class="form-control" name="gio_chuyenxe" required>
                             </div>
                         </div>
                         <div class="modal-footer">

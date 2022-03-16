@@ -19,14 +19,14 @@
                                 <label for="subjectname" class="form-label">Tên Chuyến xe chạy</label>
                                 <input type="text" class="form-control" name="ten_nhaxe">
                             </div> -->
-                            
+
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Số ghế trống</label>
-                                <input type="text" class="form-control" name="sodt_nhaxe">
+                                <input type="text" class="form-control" name="sodt_nhaxe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Trạng thái</label>
-                                <input type="text" class="form-control" name="dc_nhaxe">
+                                <input type="text" class="form-control" name="dc_nhaxe" required>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -52,14 +52,14 @@
                                 <label for="subjectname" class="form-label">mã Chuyến xe chạy</label>
                                 <input type="text" class="form-control" name="ten_nhaxe">
                             </div> -->
-                            
+
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Số ghế trống</label>
-                                <input type="text" class="form-control" name="sodt_nhaxe">
+                                <input type="text" class="form-control" name="sodt_nhaxe" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subjectname" class="form-label">Trạng thái</label>
-                                <input type="text" class="form-control" name="dc_nhaxe">
+                                <input type="text" class="form-control" name="dc_nhaxe" required>
                             </div>
                         </div>
                         <div class="modal-footer">
